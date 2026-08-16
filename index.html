@@ -1,582 +1,725 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="author" content="Untree.co">
-  <link rel="shortcut icon" href="favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Pajar - Software Engineer & Backend Specialist. Crafting scalable architectures, national health surveillance systems, and high-impact web applications.">
+  <meta name="keywords"
+    content="Pajar, Software Engineer, Backend Developer, Laravel, CakePHP, Golang, Python, Next.js, Portfolio">
+  <meta name="author" content="Pajar">
+  <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
 
-  <meta name="description" content="" />
-  <meta name="keywords" content="" />
-
+  <!-- Google Fonts: Syne & Plus Jakarta Sans & JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=PT+Mono&display=swap"
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Syne:wght@700;800;900&display=swap"
     rel="stylesheet">
 
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/owl.carousel.min.css">
-  <link rel="stylesheet" href="css/owl.theme.default.min.css">
-  <link rel="stylesheet" href="css/jquery.fancybox.min.css">
-  <link rel="stylesheet" href="fonts/icomoon/style.css">
-  <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
-  <link rel="stylesheet" href="css/aos.css">
-  <link rel="stylesheet" href="css/style.css">
+  <!-- Modern Neo-Brutalist Electric Stylesheet -->
+  <link rel="stylesheet" href="css/modern-style.css">
 
-  <title>Pajar</title>
+  <title>Pajar &bull; Software Engineer Portfolio</title>
 </head>
 
-<body data-spy="scroll" data-target=".site-navbar-target" data-offset="100">
+<body>
 
-  <div class="lines-wrap">
-    <div class="lines-inner">
-      <div class="lines"></div>
-    </div>
-  </div>
-  <!-- END lines -->
+  <!-- =========================================================================
+       Header & Navigation (Electric Blue Navbar)
+       ========================================================================= -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#hero" class="brand-icon-logo">
+        <span class="brand-pill-icon"></span>
+        pajar.
+      </a>
 
-  <div class="site-mobile-menu site-navbar-target">
-    <div class="site-mobile-menu-header">
-      <div class="site-mobile-menu-close">
-        <span class="icofont-close js-menu-toggle"></span>
-      </div>
-    </div>
-    <div class="site-mobile-menu-body"></div>
-  </div>
-
-  <nav class="site-nav dark mb-5 site-navbar-target">
-    <div class="container">
-      <div class="site-navigation">
-        <a href="#" class="logo m-0">Pajar<span class="text-primary">.</span></a>
-
-        <ul class="js-clone-nav d-none d-lg-inline-none site-menu float-right site-nav-wrap">
-          <li><a href="#home-section" class="nav-link active">Home</a></li>
-          <li><a href="#portfolio-section" class="nav-link">Portfolio</a></li>
-          <li><a href="#about-section" class="nav-link">About</a></li>
-          <li><a href="#services-section" class="nav-link">Skills</a></li>
-
-          <li><a href="#contact-section" class="nav-link">Contact us</a></li>
+      <nav>
+        <ul class="nav-links-list">
+          <li><a href="#about" class="nav-link-item">About</a></li>
+          <li><a href="#services" class="nav-link-item">Services</a></li>
+          <li><a href="#portfolio" class="nav-link-item">Portfolio</a></li>
+          <li><a href="#contact" class="nav-link-item">Contact</a></li>
         </ul>
+      </nav>
 
-        <a href="#" class="burger ml-auto float-right site-menu-toggle js-menu-toggle d-inline-block d-lg-inline-block"
-          data-toggle="collapse" data-target="#main-navbar">
-          <span></span>
-        </a>
-
+      <div>
+        <a href="#contact" class="btn-pill-white">Contact Us</a>
+        <button class="mobile-menu-btn" aria-label="Toggle Menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
       </div>
     </div>
-  </nav>
 
-
-
-  <div class="untree_co-section pb-0" id="home-section">
-    <div class="container">
-      <div class="row justify-content-center text-center">
-        <div class="col-md-7">
-          <h1 class="heading gsap-reveal-hero mb-3"><strong>Hi<span class="text-primary">,</span>
-              I'm Pajar a Software Engineer</strong></h1>
-          <p class="gsap-reveal-hero"><a href="assets/Pajar - Curriculum Vitae.pdf" target="_blank"
-              class="btn btn-outline-black">Download
-              CV here</a></p>
-        </div>
-      </div>
-
+    <!-- Mobile Nav Drawer -->
+    <div class="mobile-nav-drawer">
+      <a href="#about" class="nav-link-item">About</a>
+      <a href="#services" class="nav-link-item">Services</a>
+      <a href="#portfolio" class="nav-link-item">Portfolio</a>
+      <a href="#contact" class="nav-link-item">Contact</a>
+      <a href="assets/Pajar - Curriculum Vitae.pdf" target="_blank" class="btn-pill-lime" download>
+        Download CV
+      </a>
     </div>
-  </div>
+  </header>
 
+  <main>
+    <!-- =========================================================================
+         Hero Section (Boozt Agency Layout: Giant Neon Lime Text & Phone Mockup)
+         ========================================================================= -->
+    <section class="hero-boozt-section" id="hero">
+      <div class="container hero-main-layout">
 
-  <div class="untree_co-section untree_co-section-4 pb-0" id="portfolio-section">
-    <div class="container">
+        <!-- Giant Neon Lime Heading -->
+        <h1 class="hero-giant-heading">
+          <span class="heading-line">BUILD</span>
+          <span class="heading-line">NOW</span>
+        </h1>
 
+        <!-- Left & Right Columns Overlay -->
+        <div class="hero-content-columns">
 
-      <div class="relative">
-        <div class="loader-portfolio-wrap">
-          <div class="loader-portfolio"></div>
+          <!-- Left Intro Column -->
+          <div class="hero-left-intro">
+            <p>
+              Welcome to Pajar's engineering hub, transforming complex business logic into high-performance web systems
+              and APIs that pack a punch!
+            </p>
+            <a href="#portfolio" class="btn-pill-lime">Explore Works</a>
+          </div>
+
+          <!-- Center Smartphone Mockup (Overlapping Element) -->
+          <div class="hero-phone-mockup-wrap">
+            <div class="phone-screen-content">
+              <div class="phone-pattern-bg"></div>
+
+              <!-- Top Social Tabs -->
+              <div class="phone-top-tabs">
+                <span>Following</span>
+                <span class="active">For you</span>
+              </div>
+
+              <!-- Portrait Photo -->
+              <img src="images/pajar_hero_portrait.jpg" alt="Pajar Software Engineer" class="phone-portrait-img">
+
+              <!-- Side Action Pills (Reels/TikTok style from reference) -->
+              <div class="phone-side-actions">
+                <div class="phone-action-pill" title="PHP / Go">&hearts;</div>
+                <div class="phone-action-pill" title="Fullstack">&hellip;</div>
+                <div class="phone-action-pill" title="Share">&nearr;</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Metrics Column -->
+          <div class="hero-right-metrics">
+            <div class="hero-metric-item">
+              <div class="metric-val">+11</div>
+              <div class="metric-lbl">Delivered Projects</div>
+            </div>
+            <div class="hero-metric-item">
+              <div class="metric-val">+4</div>
+              <div class="metric-lbl">Core Tech Stacks</div>
+            </div>
+            <div class="hero-metric-item">
+              <div class="metric-val">100<span>%</span></div>
+              <div class="metric-lbl">Production Reliability</div>
+            </div>
+          </div>
+
         </div>
+
       </div>
-      <div id="portfolio-single-holder"></div>
+    </section>
 
-      <div class="portfolio-wrapper">
+    <!-- =========================================================================
+         Client / Tech Stack Ticker Ribbon (Transition Ribbon)
+         ========================================================================= -->
+    <div class="brand-ticker-ribbon">
+      <div class="ticker-track">
+        <div class="ticker-brand-item">LARAVEL <span class="ticker-star">&bull;</span></div>
+        <div class="ticker-brand-item">CAKEPHP <span class="ticker-star">&bull;</span></div>
+        <div class="ticker-brand-item">GOLANG <span class="ticker-star">&bull;</span></div>
+        <div class="ticker-brand-item">PYTHON <span class="ticker-star">&bull;</span></div>
+        <div class="ticker-brand-item">NEXT.JS <span class="ticker-star">&bull;</span></div>
+        <div class="ticker-brand-item">MYSQL <span class="ticker-star">&bull;</span></div>
+        <div class="ticker-brand-item">POSTGRESQL <span class="ticker-star">&bull;</span></div>
+        <div class="ticker-brand-item">NGINX <span class="ticker-star">&bull;</span></div>
+        <div class="ticker-brand-item">REST APIS <span class="ticker-star">&bull;</span></div>
+        <div class="ticker-brand-item">LARAVEL <span class="ticker-star">&bull;</span></div>
+        <div class="ticker-brand-item">CAKEPHP <span class="ticker-star">&bull;</span></div>
+        <div class="ticker-brand-item">GOLANG <span class="ticker-star">&bull;</span></div>
+        <div class="ticker-brand-item">PYTHON <span class="ticker-star">&bull;</span></div>
+        <div class="ticker-brand-item">NEXT.JS <span class="ticker-star">&bull;</span></div>
+        <div class="ticker-brand-item">MYSQL <span class="ticker-star">&bull;</span></div>
+      </div>
+    </div>
 
-        <div id="posts" class="row">
+    <!-- =========================================================================
+         About Section (Electric Neon Lime Background)
+         ========================================================================= -->
+    <section class="section-neon-lime" id="about">
+      <div class="container about-boozt-layout">
 
-          <div class="item web branding col-sm-6 col-md-6 col-lg-4 isotope-mb-2">
-            <div class="portfolio-item isotope-item gsap-reveal-img" data-id="1">
-              <div class="overlay">
-                <span class="wrap-icon icon-link2"></span>
-                <div class="portfolio-item-content">
-                  <h3>Sistem Pemesanan Kopi Kasir</h3>
-                  <p>Laravel</p>
-                </div>
-              </div>
-              <img src="images/cafe.png" class="lazyload  img-fluid" alt="Images" />
-            </div>
+        <!-- Left Title & Squircle Portrait -->
+        <div class="about-headline-block">
+          <h2>
+            <span>About</span>
+            <span>Pajar</span>
+          </h2>
+
+          <div class="about-squircle-portrait">
+            <img src="images/pajar_hero_portrait.jpg" alt="Pajar Portrait">
           </div>
+        </div>
 
-          <div class="item web branding col-sm-6 col-md-6 col-lg-4 isotope-mb-2">
-            <div class="portfolio-item isotope-item gsap-reveal-img" data-id="2">
-              <div class="overlay">
-                <span class="wrap-icon icon-link2"></span>
-                <div class="portfolio-item-content">
-                  <h3>Sistem Pencatatan Logistik dan Peralatan</h3>
-                  <p>CakePHP</p>
-                </div>
-              </div>
-              <img src="images/inalog.png" class="lazyload  img-fluid" alt="Images" />
-            </div>
-          </div>
-
-          <div class="item web branding col-sm-6 col-md-6 col-lg-4 isotope-mb-2">
-            <div class="portfolio-item isotope-item gsap-reveal-img">
-              <div class="overlay">
-                <span class="wrap-icon icon-link2"></span>
-                <div class="portfolio-item-content">
-                  <h3>Pengaduan Masyarakat / Siswa Wikrama Bogor</h3>
-                  <p>Laravel</p>
-                </div>
-              </div>
-              <img src="images/pemas-2.png" class="lazyload  img-fluid" alt="Images" />
-            </div>
-          </div>
-
-          <div class="item web branding col-sm-6 col-md-6 col-lg-4 isotope-mb-2">
-            <div class="portfolio-item isotope-item gsap-reveal-img">
-              <div class="overlay">
-                <span class="wrap-icon icon-link2"></span>
-                <div class="portfolio-item-content">
-                  <h3>Peminjaman Perpustakaan</h3>
-                  <p>Laravel</p>
-                </div>
-              </div>
-              <img src="images/perpus.png" class="lazyload  img-fluid" alt="Images" />
-            </div>
-          </div>
-
-          <div class="item web branding col-sm-6 col-md-6 col-lg-4 isotope-mb-2">
-            <div class="portfolio-item isotope-item gsap-reveal-img">
-              <div class="overlay">
-                <span class="wrap-icon icon-link2"></span>
-                <div class="portfolio-item-content">
-                  <h3>Sistem Pencatatan Penyakit Arbovirosis DBD</h3>
-                  <p>CakePHP</p>
-                </div>
-              </div>
-              <img src="images/siarvi.png" class="lazyload  img-fluid" alt="Images" />
-            </div>
-          </div>
-
-
-          <div class="item web branding col-sm-6 col-md-6 col-lg-4 isotope-mb-2">
-            <div class="portfolio-item isotope-item gsap-reveal-img">
-              <div class="overlay">
-                <span class="wrap-icon icon-link2"></span>
-                <div class="portfolio-item-content">
-                  <h3>Sistem kasir Barbershop</h3>
-                  <p>PHP Native</p>
-                </div>
-              </div>
-              <img src="images/barber.png" class="lazyload  img-fluid" alt="Images" />
-            </div>
-          </div>
-
-          <div class="item web branding col-sm-6 col-md-6 col-lg-4 isotope-mb-2">
-            <div class="portfolio-item isotope-item gsap-reveal-img">
-              <div class="overlay">
-                <span class="wrap-icon icon-link2"></span>
-                <div class="portfolio-item-content">
-                  <h3>Sistem Pencatatan Penyakit Diabetes</h3>
-                  <p>CakePHP</p>
-                </div>
-              </div>
-              <img src="images/siptm.png" class="lazyload  img-fluid" alt="Images" />
-            </div>
-          </div>
-
-          <div class="item web branding col-sm-6 col-md-6 col-lg-4 isotope-mb-2">
-            <div class="portfolio-item isotope-item gsap-reveal-img">
-              <div class="overlay">
-                <span class="wrap-icon icon-link2"></span>
-                <div class="portfolio-item-content">
-                  <h3>Task Management Website</h3>
-                  <p>AdonisJS, NextJS</p>
-                </div>
-              </div>
-              <img src="images/fieldtrack.png" class="lazyload  img-fluid" alt="Images" />
-            </div>
-          </div>
-
-          <div class="item web branding col-sm-6 col-md-6 col-lg-4 isotope-mb-2">
-            <div class="portfolio-item isotope-item gsap-reveal-img">
-              <div class="overlay">
-                <span class="wrap-icon icon-link2"></span>
-                <div class="portfolio-item-content">
-                  <h3>Sistem Pencatatan Penyakit Cacingan POPM</h3>
-                  <p>Laravel</p>
-                </div>
-              </div>
-              <img src="images/efilca.png" class="lazyload  img-fluid" alt="Images" />
-            </div>
-          </div>
-
-          <div class="item web branding col-sm-6 col-md-6 col-lg-4 isotope-mb-2">
-            <div class="portfolio-item isotope-item gsap-reveal-img">
-              <div class="overlay">
-                <span class="wrap-icon icon-link2"></span>
-                <div class="portfolio-item-content">
-                  <h3>Elektronik Suplemen Farmalkes</h3>
-                  <p>CakePHP</p>
-                </div>
-              </div>
-              <img src="images/farmakope.png" class="lazyload  img-fluid" alt="Images" />
-            </div>
-          </div>
-
-          <!-- {{-- <div class="item web branding col-sm-6 col-md-6 col-lg-4 isotope-mb-2">
-            <a href="portfolio-single-3.html" class="portfolio-item isotope-item gsap-reveal-img">
-              <div class="overlay">
-                <span class="wrap-icon icon-link2"></span>
-                <div class="portfolio-item-content">
-                  <h3>The Dog</h3>
-                  <p>web, branding</p>
-                </div>
-              </div>
-              <img src="images/img_11.jpg" class="lazyload  img-fluid" alt="Images" />
+        <!-- Right Content Block -->
+        <div class="about-text-content">
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span class="about-tag-badge">Who?</span>
+            <a href="assets/Pajar - Curriculum Vitae.pdf" target="_blank" class="btn-pill-outline-blue" download>
+              Download CV
             </a>
           </div>
 
-          <div class="item web branding col-sm-6 col-md-6 col-lg-4 isotope-mb-2">
-            <a href="portfolio-single-3.html" class="portfolio-item isotope-item gsap-reveal-img">
-              <div class="overlay">
-                <span class="wrap-icon icon-link2"></span>
-                <div class="portfolio-item-content">
-                  <h3>Beautiful Woman</h3>
-                  <p>web, branding</p>
-                </div>
-              </div>
-              <img src="images/img_12.jpg" class="lazyload  img-fluid" alt="Images" />
-            </a>
+          <p class="about-lead-para">
+            I’m not your average developer, I’m a passionate Software Engineer building mission-critical
+            platforms, high-throughput backend APIs, and modern web applications across public health, retail POS, and
+            enterprise HRIS.
+          </p>
+
+          <p class="about-sub-para">
+            With hands-on experience maintaining national surveillance platforms for the Ministry of Health RI (Siarvi,
+            SiPTM, Farmakope, E-FILCA) as well as collaborative fullstack systems with Next.js and AdonisJS, I focus on
+            clean code, database optimization, and scalable architectures that empower organizations.
+          </p>
+
+          <div style="margin-top: 1rem;">
+            <a href="#contact" class="btn-pill-blue">Work With Me &nearr;</a>
           </div>
-
-          <div class="item web branding col-sm-6 col-md-6 col-lg-4 isotope-mb-2">
-            <a href="portfolio-single-3.html" class="portfolio-item isotope-item gsap-reveal-img">
-              <div class="overlay">
-                <span class="wrap-icon icon-link2"></span>
-                <div class="portfolio-item-content">
-                  <h3>Book Binding</h3>
-                  <p>web, branding</p>
-                </div>
-              </div>
-              <img src="images/img_2.jpg" class="lazyload  img-fluid" alt="Images" />
-            </a>
-          </div> --}} -->
-
-
         </div>
+
       </div>
+    </section>
 
+    <!-- =========================================================================
+         Services / Capabilities Section (Neon Lime Background with Squircle Cards)
+         ========================================================================= -->
+    <section class="services-boozt-section" id="services">
+      <div class="container">
 
-      <!-- </div>
-        </div> -->
-    </div>
-  </div>
-
-
-  <div class="untree_co-section pb-0" id="about-section">
-    <div class="container">
-      <div class="row justify-content-center mb-3">
-        <div class="col-lg-7 mx-auto text-center author-wrap">
-          <img src="images/12008081 Pajar.jpg" alt="Image" class="img-fluid rounded-circle mb-3">
-          <h3 class="text-black h5 font-weight-bold mb-2 gsap-reveal-hero">Pajar</h3>
-          <p class="gsap-reveal-hero">Software Engineer</p>
-        </div>
-      </div>
-
-      <div class="row justify-content-center">
-        <div class="col-lg-7">
-
-
-          <p class="gsap-reveal-hero">
-            Hi, I’m Pajar, a passionate Software Engineer with hands-on experience in building and managing diverse applications across various industries. I specialize in PHP, JavaScript, Go (Golang), and Python, and I enjoy transforming ideas into scalable, reliable, and user-friendly solutions.
-            Throughout my career, I have worked on and maintained applications such as HRIS (Human Resource Information Systems), e-Voucher platforms, POS (Point of Sale) systems, as well as comprehensive management systems including e-Loan platforms, healthcare solutions, and hospital care systems.
-            What drives me is the belief that technology should continuously evolve to solve real-world problems. That’s why I am always eager to learn, adapt, and grow, keeping up with new tools, frameworks, and best practices to deliver impactful results.
-            I strive not only to write clean and efficient code but also to create solutions that empower businesses and improve people’s lives.
+        <div class="services-header-row">
+          <h2 class="services-main-title">
+            <span>Engineering</span>
+            <span>Services</span>
+          </h2>
+          <p class="services-header-desc">
+            Launching robust web architectures and data-driven systems into production with reliable, clean engineering.
           </p>
         </div>
-      </div>
-    </div>
-  </div>
 
+        <div class="services-creative-grid">
 
-  <div class="untree_co-section pb-0" id="services-section">
-    <div class="container">
-      <div class="row mb-4">
-        <div class="col-lg-7 text-center mx-auto">
-          <h2 class="section-heading gsap-reveal-hero mb-0"><strong>Hard Skill</strong></h2>
-          <div class="wave gsap-reveal-hero">
-            <svg>
-              <path d="M10,10 L50,100 L90,50" stroke="#0389ff"></path>
-            </svg>
-          </div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-          <div class="service text-center">
-            <div class="gsap-reveal-hero mb-3">
-              <span class="icon-service"><img src="assets/img/laravel.svg" alt="Image" class="img-fluid"></span>
+          <!-- Card 1: Backend Architecture -->
+          <div class="service-squircle-card">
+            <div class="service-card-art art-wavy">
+              <img src="images/siarvi.png" alt="Backend Architecture" style="opacity: 0.85;">
             </div>
-            <h3 class="gsap-reveal-hero">Laravel Framework</h3>
-          </div>
-        </div>
-
-        <div class="col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-          <div class="service text-center">
-            <div class="gsap-reveal-hero mb-3">
-              <span class="icon-service"><img src="assets/img/angular.svg" alt="Image" class="img-fluid"></span>
+            <h3 class="service-card-title">Backend &amp; API Architecture</h3>
+            <p class="service-card-desc">
+              Designing scalable RESTful APIs, high-throughput microservices, authentication systems, and optimized
+              database schemas.
+            </p>
+            <div class="service-tech-tags">
+              <span class="service-tag-pill">Laravel</span>
+              <span class="service-tag-pill">CakePHP</span>
+              <span class="service-tag-pill">Golang</span>
+              <span class="service-tag-pill">Python</span>
             </div>
-            <h3 class="gsap-reveal-hero">Angular</h3>
           </div>
-        </div>
 
-        <div class="col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-          <div class="service text-center">
-            <div class="gsap-reveal-hero mb-3">
-              <span class="icon-service"><img src="assets/img/nodejs.svg" alt="Image" class="img-fluid"></span>
+          <!-- Card 2: Healthcare & Government Systems -->
+          <div class="service-squircle-card">
+            <div class="service-card-art art-colorblock">
+              <img src="images/siptm.png" alt="Government Systems" style="opacity: 0.85;">
             </div>
-            <h3 class="gsap-reveal-hero">Node JS</h3>
+            <h3 class="service-card-title">Healthcare &amp; Gov Systems</h3>
+            <p class="service-card-desc">
+              Architecting nationwide epidemiological surveillance platforms with strict data accuracy, multi-tier
+              regional access, and reporting.
+            </p>
+            <div class="service-tech-tags">
+              <span class="service-tag-pill">Health Informatics</span>
+              <span class="service-tag-pill">MySQL</span>
+              <span class="service-tag-pill">GIS Analytics</span>
+            </div>
           </div>
-        </div>
 
-        <div class="col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-          <div class="service text-center">
-            <div class="gsap-reveal-hero mb-3">
-              <span class="icon-service"><img src="assets/img/cakephp.svg" alt="Image" class="img-fluid"></span>
+          <!-- Card 3: Enterprise POS & SaaS -->
+          <div class="service-squircle-card">
+            <div class="service-card-art art-pattern">
+              <img src="images/fieldtrack.png" alt="Enterprise POS & SaaS" style="opacity: 0.85;">
             </div>
-            <h3 class="gsap-reveal-hero">CakePHP Framework</h3>
+            <h3 class="service-card-title">Enterprise POS &amp; SaaS</h3>
+            <p class="service-card-desc">
+              Building real-time point-of-sale inventory engines, automated financial reports, thermal print
+              integration, and collaboration tools.
+            </p>
+            <div class="service-tech-tags">
+              <span class="service-tag-pill">Next.js</span>
+              <span class="service-tag-pill">AdonisJS</span>
+              <span class="service-tag-pill">POS Engines</span>
+            </div>
           </div>
-        </div>
 
-        <div class="col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-          <div class="service text-center">
-            <div class="gsap-reveal-hero mb-3">
-              <span class="icon-service"><img src="assets/img/python.svg" alt="Image" class="img-fluid"></span>
-            </div>
-            <h3 class="gsap-reveal-hero">Python</h3>
-          </div>
-        </div>
-
-        <div class="col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-          <div class="service text-center">
-            <div class="gsap-reveal-hero mb-3">
-              <span class="icon-service"><img src="assets/img/golang.svg" alt="Image" class="img-fluid"></span>
-            </div>
-            <h3 class="gsap-reveal-hero">Golang</h3>
-          </div>
         </div>
 
       </div>
-    </div>
-  </div>
+    </section>
 
-  <div class="untree_co-section pb-0" id="services-section">
-    <div class="container">
-      <div class="row mb-4">
-        <div class="col-lg-7 text-center mx-auto">
-          <h2 class="section-heading gsap-reveal-hero mb-0"><strong>Soft Skill</strong></h2>
-          <div class="wave gsap-reveal-hero">
-            <svg>
-              <path d="M10,10 L50,100 L90,50" stroke="#0389ff"></path>
-            </svg>
-          </div>
-        </div>
-      </div>
+    <!-- =========================================================================
+         Portfolio Section (Deep Electric Blue Background)
+         ========================================================================= -->
+    <section class="portfolio-boozt-section" id="portfolio">
+      <div class="container">
 
-      <div class="row">
-        <div class="col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-          <div class="service text-center">
-            <div class="gsap-reveal-hero mb-3">
-              <span class="icon-service"><img src="assets/img/team_work.svg" alt="Image" class="img-fluid"></span>
+        <div class="portfolio-header-flex">
+          <h2 class="portfolio-giant-title">
+            <span>Selected</span>
+            <span>Portfolio</span>
+          </h2>
+          <div class="portfolio-header-right">
+            <p>
+              Check out my production-tested systems, government surveillance platforms, and enterprise solutions.
+            </p>
+            <div>
+              <a href="#contact" class="btn-pill-lime">Start a Project</a>
             </div>
-            <h3 class="gsap-reveal-hero">Collaboration</h3>
           </div>
         </div>
-        <div class="col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-          <div class="service text-center">
-            <div class="gsap-reveal-hero mb-3">
-              <span class="icon-service"><img src="assets/img/problem_solving.svg" alt="Image" class="img-fluid"></span>
+
+        <!-- Filter Pills -->
+        <div class="portfolio-filter-row">
+          <button class="filter-btn-pill active" data-filter="all">All Projects (11)</button>
+          <button class="filter-btn-pill" data-filter="healthtech">Healthcare &amp; Gov</button>
+          <button class="filter-btn-pill" data-filter="enterprise">Enterprise &amp; POS</button>
+          <button class="filter-btn-pill" data-filter="fullstack">Fullstack &amp; SaaS</button>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="portfolio-projects-grid">
+
+          <!-- 00: Sijukut / JukutTaman -->
+          <article class="project-squircle-card" data-category="fullstack enterprise">
+            <div class="project-card-thumbnail">
+              <span class="project-category-chip">E-Commerce &amp; Tool</span>
+              <img src="images/sijukut.png" alt="JukutTaman SiJukut Lawn Estimator" loading="lazy">
             </div>
-            <h3 class="gsap-reveal-hero">Problem Solving</h3>
-          </div>
-        </div>
-
-        <div class="col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-          <div class="service text-center">
-            <div class="gsap-reveal-hero mb-3">
-              <span class="icon-service"><img src="assets/img/management-waktu.svg" alt="Image"
-                  class="img-fluid"></span>
-            </div>
-            <h3 class="gsap-reveal-hero">Time Management</h3>
-          </div>
-        </div>
-
-
-        <div class="col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-          <div class="service text-center">
-            <div class="gsap-reveal-hero mb-3">
-              <span class="icon-service"><img src="assets/img/critical-thinking.svg" alt="Image"
-                  class="img-fluid"></span>
-            </div>
-            <h3 class="gsap-reveal-hero">Critical Thinking</h3>
-          </div>
-        </div>
-
-        <div class="col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-          <div class="service text-center">
-            <div class="gsap-reveal-hero mb-3">
-              <span class="icon-service"><img src="assets/img/attention-detail.svg" alt="Image"
-                  class="img-fluid"></span>
-            </div>
-            <h3 class="gsap-reveal-hero">Attention to Detail</h3>
-          </div>
-        </div>
-
-        <div class="col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-          <div class="service text-center">
-            <div class="gsap-reveal-hero mb-3">
-              <span class="icon-service"><img src="assets/img/continuous-learning.svg" alt="Image"
-                  class="img-fluid"></span>
-            </div>
-            <h3 class="gsap-reveal-hero">Continuous Learning</h3>
-          </div>
-        </div>
-
-        <!-- {{-- <div class="col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-          <div class="service text-center">
-            <div class="gsap-reveal-hero mb-3">
-              <span class="icon-service"><img src="assets/img/cakephp.svg" alt="Image" class="img-fluid"></span>
-            </div>
-            <h3 class="gsap-reveal-hero">CakePHP Framework</h3>
-          </div>
-        </div>
-
-        <div class="col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-          <div class="service text-center">
-            <div class="gsap-reveal-hero mb-3">
-              <span class="icon-service"><img src="assets/img/nginx.svg" alt="Image" class="img-fluid"></span>
-            </div>
-            <h3 class="gsap-reveal-hero">Nginx</h3>
-          </div>
-        </div> --}} -->
-
-      </div>
-    </div>
-  </div>
-
-
-  <div class="untree_co-section" id="contact-section">
-    <div class="container">
-      <div class="row mb-5">
-        <div class="col-lg-7 text-center mx-auto">
-          <h2 class="section-heading gsap-reveal-hero mb-0"><strong>Contact</strong></h2>
-          <p class="gsap-reveal-hero">Available for work. Get in touch</p>
-
-          <div class="wave gsap-reveal-hero">
-            <svg>
-              <path d="M10,10 L50,100 L90,50" stroke="#0389ff"></path>
-            </svg>
-          </div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-6">
-          <form action="" method="GET">
-            <div class="row">
-              <div class="col-lg-12 form-group">
-                <input type="text" class="form-control" name="name" placeholder="Name">
+            <div class="project-card-info">
+              <h3 class="project-item-title">JukutTaman (SiJukut) &mdash; Lawn Supply &amp; Dynamic Cost Estimator</h3>
+              <p class="project-item-desc">
+                Platform e-commerce dan kalkulator estimasi biaya rumput taman interaktif dengan slider luas area dinamis, pemilihan varietas rumput, kalkulasi jasa tanam, dan direct WhatsApp order integration.
+              </p>
+              <div class="project-tech-chips-row">
+                <span class="proj-tech-chip">Laravel / Next.js</span>
+                <span class="proj-tech-chip">TailwindCSS</span>
+                <span class="proj-tech-chip">Dynamic Calculator</span>
+                <span class="proj-tech-chip">WhatsApp API</span>
+              </div>
+              <div class="project-bottom-action">
+                <button class="btn-explore-project">
+                  View Full Details &nearr;
+                </button>
               </div>
             </div>
-            <div class="row">
-              <div class="col-lg-12 form-group">
-                <input type="email" class="form-control" name="email" placeholder="Email address">
+          </article>
+
+          <!-- 01: Siarvi -->
+          <article class="project-squircle-card" data-category="healthtech">
+            <div class="project-card-thumbnail">
+              <span class="project-category-chip">Gov / Healthtech</span>
+              <img src="images/siarvi.png" alt="Siarvi Arbovirosis DBD" loading="lazy">
+            </div>
+            <div class="project-card-info">
+              <h3 class="project-item-title">Siarvi - Surveilans Penyakit DBD Kemenkes</h3>
+              <p class="project-item-desc">
+                Platform surveilans epidemiologi Kemenkes RI untuk pemantauan dan pengendalian penyebaran Arbovirosis
+                skala nasional.
+              </p>
+              <div class="project-tech-chips-row">
+                <span class="proj-tech-chip">CakePHP</span>
+                <span class="proj-tech-chip">MySQL</span>
+                <span class="proj-tech-chip">GIS Region</span>
+              </div>
+              <div class="project-bottom-action">
+                <button class="btn-explore-project">
+                  View Full Details &nearr;
+                </button>
               </div>
             </div>
-            <div class="row">
-              <div class="col-lg-12 form-group">
-                <textarea id="" cols="30" rows="7" name="message" class="form-control"
-                  placeholder="Write your message..."></textarea>
+          </article>
+
+          <!-- 02: SiPTM -->
+          <article class="project-squircle-card" data-category="healthtech">
+            <div class="project-card-thumbnail">
+              <span class="project-category-chip">Gov / Healthtech</span>
+              <img src="images/siptm.png" alt="SiPTM Diabetes" loading="lazy">
+            </div>
+            <div class="project-card-info">
+              <h3 class="project-item-title">SiPTM - Monitoring Faktor Risiko Diabetes</h3>
+              <p class="project-item-desc">
+                Platform monitoring skrining faktor risiko penyakit tidak menular (diabetes &amp; hipertensi)
+                terintegrasi puskesmas.
+              </p>
+              <div class="project-tech-chips-row">
+                <span class="proj-tech-chip">CakePHP</span>
+                <span class="proj-tech-chip">MySQL</span>
+                <span class="proj-tech-chip">Analytics</span>
+              </div>
+              <div class="project-bottom-action">
+                <button class="btn-explore-project">
+                  View Full Details &nearr;
+                </button>
               </div>
             </div>
-            <div class="row">
-              <div class="col-12 form-group">
-                <input type="submit" class="btn btn-black" value="Send Message">
+          </article>
+
+          <!-- 03: FieldTrack -->
+          <article class="project-squircle-card" data-category="fullstack">
+            <div class="project-card-thumbnail">
+              <span class="project-category-chip">SaaS / Fullstack</span>
+              <img src="images/fieldtrack.png" alt="FieldTrack Task Management" loading="lazy">
+            </div>
+            <div class="project-card-info">
+              <h3 class="project-item-title">FieldTrack - Team Task &amp; Operations Hub</h3>
+              <p class="project-item-desc">
+                Aplikasi manajemen tugas kolaboratif tim lapangan dengan kanban board real-time, time tracking, dan
+                granular permissions.
+              </p>
+              <div class="project-tech-chips-row">
+                <span class="proj-tech-chip">Next.js</span>
+                <span class="proj-tech-chip">AdonisJS</span>
+                <span class="proj-tech-chip">TypeScript</span>
+              </div>
+              <div class="project-bottom-action">
+                <button class="btn-explore-project">
+                  View Full Details &nearr;
+                </button>
               </div>
             </div>
+          </article>
+
+          <!-- 04: Farmakope -->
+          <article class="project-squircle-card" data-category="healthtech">
+            <div class="project-card-thumbnail">
+              <span class="project-category-chip">Gov / Standards</span>
+              <img src="images/farmakope.png" alt="Farmakope Indonesia" loading="lazy">
+            </div>
+            <div class="project-card-info">
+              <h3 class="project-item-title">Farmalkes - Elektronik Suplemen Farmakope</h3>
+              <p class="project-item-desc">
+                Portal dokumen standarisasi mutu sediaan farmasi dan regulasi bahan baku obat Kementerian Kesehatan RI.
+              </p>
+              <div class="project-tech-chips-row">
+                <span class="proj-tech-chip">CakePHP</span>
+                <span class="proj-tech-chip">PostgreSQL</span>
+                <span class="proj-tech-chip">Archive</span>
+              </div>
+              <div class="project-bottom-action">
+                <button class="btn-explore-project">
+                  View Full Details &nearr;
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 05: E-FILCA -->
+          <article class="project-squircle-card" data-category="healthtech">
+            <div class="project-card-thumbnail">
+              <span class="project-category-chip">Gov / Health</span>
+              <img src="images/efilca.png" alt="E-FILCA POPM" loading="lazy">
+            </div>
+            <div class="project-card-info">
+              <h3 class="project-item-title">E-FILCA - Agregasi POPM Kecacingan</h3>
+              <p class="project-item-desc">
+                Sistem agregasi pemberian obat pencegahan massal (POPM) kecacingan nasional untuk pemantauan intervensi
+                anak sekolah.
+              </p>
+              <div class="project-tech-chips-row">
+                <span class="proj-tech-chip">Laravel</span>
+                <span class="proj-tech-chip">MySQL</span>
+                <span class="proj-tech-chip">Validation</span>
+              </div>
+              <div class="project-bottom-action">
+                <button class="btn-explore-project">
+                  View Full Details &nearr;
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 06: Cafe POS -->
+          <article class="project-squircle-card" data-category="enterprise">
+            <div class="project-card-thumbnail">
+              <span class="project-category-chip">Retail POS</span>
+              <img src="images/cafe.png" alt="Cafe POS System" loading="lazy">
+            </div>
+            <div class="project-card-info">
+              <h3 class="project-item-title">Cafe Cashier &amp; Stock Inventory POS</h3>
+              <p class="project-item-desc">
+                Aplikasi kasir coffee shop dengan pemotongan stok bahan baku otomatis, display kitchen order, dan
+                pelaporan omzet.
+              </p>
+              <div class="project-tech-chips-row">
+                <span class="proj-tech-chip">Laravel</span>
+                <span class="proj-tech-chip">MySQL</span>
+                <span class="proj-tech-chip">Thermal Print</span>
+              </div>
+              <div class="project-bottom-action">
+                <button class="btn-explore-project">
+                  View Full Details &nearr;
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 07: Inalog -->
+          <article class="project-squircle-card" data-category="enterprise">
+            <div class="project-card-thumbnail">
+              <span class="project-category-chip">Logistics</span>
+              <img src="images/inalog.png" alt="Inalog Logistics" loading="lazy">
+            </div>
+            <div class="project-card-info">
+              <h3 class="project-item-title">Inalog - Logistik &amp; Pergudangan</h3>
+              <p class="project-item-desc">
+                Sistem pergudangan enterprise untuk pelacakan pergerakan barang, servis peralatan, dan otomasi alur
+                requisition.
+              </p>
+              <div class="project-tech-chips-row">
+                <span class="proj-tech-chip">CakePHP</span>
+                <span class="proj-tech-chip">MySQL</span>
+                <span class="proj-tech-chip">Asset Tracking</span>
+              </div>
+              <div class="project-bottom-action">
+                <button class="btn-explore-project">
+                  View Full Details &nearr;
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 08: Pengaduan Wikrama -->
+          <article class="project-squircle-card" data-category="fullstack">
+            <div class="project-card-thumbnail">
+              <span class="project-category-chip">Public Service</span>
+              <img src="images/pemas-2.png" alt="Pengaduan Siswa" loading="lazy">
+            </div>
+            <div class="project-card-info">
+              <h3 class="project-item-title">Sistem Pengaduan Aspirasi Siswa &amp; Warga</h3>
+              <p class="project-item-desc">
+                Portal aspirasi transparan dengan tracking tiket status real-time, enkripsi lampiran dokumen, dan panel
+                moderasi.
+              </p>
+              <div class="project-tech-chips-row">
+                <span class="proj-tech-chip">Laravel</span>
+                <span class="proj-tech-chip">MySQL</span>
+                <span class="proj-tech-chip">Ticketing</span>
+              </div>
+              <div class="project-bottom-action">
+                <button class="btn-explore-project">
+                  View Full Details &nearr;
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 09: Barber POS -->
+          <article class="project-squircle-card" data-category="enterprise">
+            <div class="project-card-thumbnail">
+              <span class="project-category-chip">Retail POS</span>
+              <img src="images/barber.png" alt="Barbershop POS" loading="lazy">
+            </div>
+            <div class="project-card-info">
+              <h3 class="project-item-title">Barbershop Cashier &amp; Booking Management</h3>
+              <p class="project-item-desc">
+                Aplikasi kasir multi-layanan dan komisi kapster dengan antrean treatment rambut dan rekap transaksi
+                harian.
+              </p>
+              <div class="project-tech-chips-row">
+                <span class="proj-tech-chip">PHP Native</span>
+                <span class="proj-tech-chip">MySQL</span>
+                <span class="proj-tech-chip">Commissions</span>
+              </div>
+              <div class="project-bottom-action">
+                <button class="btn-explore-project">
+                  View Full Details &nearr;
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 10: Perpustakaan -->
+          <article class="project-squircle-card" data-category="enterprise">
+            <div class="project-card-thumbnail">
+              <span class="project-category-chip">Info System</span>
+              <img src="images/perpus.png" alt="Library System" loading="lazy">
+            </div>
+            <div class="project-card-info">
+              <h3 class="project-item-title">Digital Library Circulation System</h3>
+              <p class="project-item-desc">
+                Sistem sirkulasi peminjaman buku digital, kartu barcode anggota, dan perhitungan denda keterlambatan
+                otomatis.
+              </p>
+              <div class="project-tech-chips-row">
+                <span class="proj-tech-chip">Laravel</span>
+                <span class="proj-tech-chip">MySQL</span>
+                <span class="proj-tech-chip">Barcode Scan</span>
+              </div>
+              <div class="project-bottom-action">
+                <button class="btn-explore-project">
+                  View Full Details &nearr;
+                </button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         Contact Section (Electric Duo-Tone)
+         ========================================================================= -->
+    <section class="contact-boozt-section" id="contact">
+      <div class="container contact-layout-grid">
+
+        <div>
+          <h2 class="contact-hero-title">
+            LET'S TALK.
+          </h2>
+          <p class="contact-desc-text">
+            Have a project, full-time engineering opportunity, or contract role? Let’s connect and create something
+            impactful together.
+          </p>
+
+          <div class="email-copy-panel">
+            <div>
+              <div
+                style="font-size: 0.75rem; font-weight: 800; text-transform: uppercase; color: rgba(35, 22, 181, 0.6); margin-bottom: 2px;">
+                Direct Email</div>
+              <div class="email-val">pajarmaulana190@gmail.com</div>
+            </div>
+            <button class="btn-pill-blue btn-copy-email" data-email="pajarmaulana190@gmail.com">
+              Copy Email
+            </button>
+          </div>
+
+          <div class="contact-social-pills">
+            <a href="https://github.com/pajarr2" target="_blank" rel="noopener noreferrer" class="social-link-pill">
+              GitHub &nearr;
+            </a>
+            <a href="https://www.linkedin.com/in/pajar-09a1a023b/" target="_blank" rel="noopener noreferrer"
+              class="social-link-pill">
+              LinkedIn &nearr;
+            </a>
+            <a href="assets/Pajar - Curriculum Vitae.pdf" target="_blank" class="social-link-pill" download>
+              Download CV &nearr;
+            </a>
+            <a href="https://maps.google.com/?q=Bogor,Indonesia" target="_blank" class="social-link-pill">
+              Bogor, ID
+            </a>
+          </div>
+        </div>
+
+        <!-- Direct Inquiry Form -->
+        <div class="contact-form-squircle">
+          <form id="contactForm">
+            <div class="form-group-item">
+              <label class="form-label-title" for="senderName">Your Name</label>
+              <input type="text" id="senderName" name="name" class="form-input-field" placeholder="e.g. Alex Johnson"
+                required>
+            </div>
+
+            <div class="form-group-item">
+              <label class="form-label-title" for="senderEmail">Email Address</label>
+              <input type="email" id="senderEmail" name="email" class="form-input-field" placeholder="alex@company.com"
+                required>
+            </div>
+
+            <div class="form-group-item">
+              <label class="form-label-title" for="senderMessage">Message</label>
+              <textarea id="senderMessage" name="message" class="form-input-field"
+                placeholder="Tell me about your project or role..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn-pill-blue" style="width: 100%; padding: 0.95rem; margin-top: 0.5rem;">
+              Send Message &nearr;
+            </button>
           </form>
         </div>
-        <div class="col-lg-6">
-          <div id="map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d990.7248074255523!2d106.83026116964577!3d-6.6594098675269215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69c8dabeb26ac5%3A0x9a56ccace9fd4056!2sJl.%20Cendana%2C%20RT.01%2FRW.06%2C%20Kertamaya%2C%20Kec.%20Bogor%20Sel.%2C%20Kota%20Bogor%2C%20Jawa%20Barat%2016138!5e0!3m2!1sen!2sid!4v1755445690824!5m2!1sen!2sid" 
-              width="600" height="450" 
-              style="border:0;" allowfullscreen="" 
-              loading="lazy" 
-              referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================================
+       Footer
+       ========================================================================= -->
+  <footer class="site-boozt-footer">
+    <div class="container footer-flex-row">
+      <div class="footer-logo-title">
+        pajar<span>.engineer</span>
+      </div>
+      <div>
+        &copy; <span id="currentYear"></span> Pajar &bull; All Rights Reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       Interactive Project Modal
+       ========================================================================= -->
+  <div class="boozt-modal-backdrop" id="projectModal" role="dialog" aria-modal="true">
+    <div class="boozt-modal-card">
+      <button class="btn-close-modal" id="modalCloseBtn" aria-label="Close modal">
+        &times;
+      </button>
+
+      <div class="modal-screen-preview">
+        <img id="modalImg" src="" alt="Project Preview">
+      </div>
+
+      <div class="modal-content-details">
+        <div class="modal-badge-tag" id="modalCategory">Category</div>
+        <h3 class="modal-proj-name" id="modalTitle">Project Title</h3>
+        <p class="modal-proj-desc" id="modalDesc">Project description...</p>
+
+        <div
+          style="font-family: var(--font-mono); font-size: 0.8rem; font-weight: 700; text-transform: uppercase; color: rgba(255,255,255,0.6); margin-bottom: 0.6rem;">
+          Tech Stack &amp; Tools:
         </div>
+        <div class="modal-chips-container" id="modalTechStack"></div>
       </div>
     </div>
   </div>
 
-  <div class="site-footer">
-    <div class="container">
-      <div class="row mt-5">
-        <div class="col-12 text-center">
-          <!--
-              **==========
-              NOTE:
-              Please don't remove this copyright link unless you buy the license here https://untree.co/license/
-
-              **==========
-            -->
-          <p class="mb-0">Copyright &copy;
-            <script>
-              document.write(new Date().getFullYear());
-            </script>. All Rights Reserved.
-          </p>
-        </div>
-      </div>
-    </div> <!-- /.container -->
-  </div> <!-- /.site-footer -->
-
-  <div id="overlayer"></div>
-  <div class="loader">
-    <div class="spinner-border" role="status">
-      <span class="sr-only">Loading...</span>
-    </div>
+  <!-- =========================================================================
+       Toast Notification
+       ========================================================================= -->
+  <div class="boozt-toast" id="toastNotification" role="status">
+    <span class="toast-msg">Email copied to clipboard!</span>
   </div>
 
-  <script src="js/jquery-3.4.1.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/jquery.animateNumber.min.js"></script>
-  <script src="js/jquery.waypoints.min.js"></script>
-  <script src="js/jquery.fancybox.min.js"></script>
-  <script src="js/aos.js"></script>
-  <script src="js/wave-animate.js"></script>
-  <script src="js/circle-progress.js"></script>
-  <script src="js/imagesloaded.pkgd.js"></script>
-  <script src="js/isotope.pkgd.min.js"></script>
-  <script src="js/jquery.easing.1.3.js"></script>
-  <script src="js/TweenMax.min.js"></script>
-  <script src="js/ScrollMagic.min.js"></script>
-  <script src="js/scrollmagic.animation.gsap.min.js"></script>
-
-
-  <script src="js/custom.js"></script>
-
+  <script>
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+  </script>
+  <script src="js/main.js"></script>
 </body>
 
 </html>
