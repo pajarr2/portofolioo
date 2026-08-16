@@ -1,0 +1,5 @@
+# Robots.txt for Pajar Developer Portfolio
+User-agent: *
+Allow: /
+
+Sitemap: https://pajar.dev/sitemap.xml
