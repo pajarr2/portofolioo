@@ -2403,8 +2403,14 @@ textarea.form-input {
   .spec-row { grid-template-columns: 5.6rem 1fr; }
 }
 
-@media (max-width: 640px) {
-  .about-top-row { flex-wrap: wrap; }
-  .exp-company-row { flex-direction: column; align-items: flex-start; gap: 0.3rem; }
-  .exp-languages { text-align: left; }
+/* hidden honeypot field used to filter spam bots in the contact form */
+.form-hp {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
 }

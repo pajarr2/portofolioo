@@ -20,9 +20,23 @@ document.addEventListener('DOMContentLoaded', () => {
   const mobileToggle = $('.mobile-menu-btn');
   const mobileDrawer = $('.mobile-nav-drawer');
 
+  const updateActiveSection = () => {
+    const probe = window.scrollY + (header ? header.offsetHeight : 0) + window.innerHeight * 0.35;
+    let current = sections[0];
+    sections.forEach((sec) => {
+      if (sec.offsetTop <= probe) current = sec;
+    });
+    if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2) current = sections[sections.length - 1];
+    navLinks.forEach((link) => {
+      const isActive = link.getAttribute('href') === `#${current.id}`;
+      link.classList.toggle('active', isActive);
+    });
+  };
+
   const onScroll = () => {
     if (header) header.classList.toggle('scrolled', window.scrollY > 24);
     updateProgress();
+    updateActiveSection();
   };
 
   /* ---------------------------------------------------------------------
@@ -59,22 +73,9 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* ---------------------------------------------------------------------
-     4. Active section indicator
+      4. Active section indicator (scroll-based, deterministic)
      --------------------------------------------------------------------- */
-  if ('IntersectionObserver' in window && sections.length) {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-        const id = entry.target.getAttribute('id');
-        navLinks.forEach((link) => {
-          const isActive = link.getAttribute('href') === `#${id}`;
-          link.classList.toggle('active', isActive);
-        });
-      });
-    }, { threshold: 0.2, rootMargin: '-10% 0px -60% 0px' });
-
-    sections.forEach((sec) => observer.observe(sec));
-  }
+  updateActiveSection();
 
   /* ---------------------------------------------------------------------
      5. Theme inversion toggle (persisted)
@@ -405,24 +406,50 @@ const email = copyBtn.getAttribute('data-email') || 'pajarr2302@gmail.com';
       }
     });
   }
-
   /* ---------------------------------------------------------------------
-     12. Contact form -> mailto
+     12. Contact form -> Resend (via /api/contact)
      --------------------------------------------------------------------- */
   const form = $('#contactForm');
   if (form) {
-    form.addEventListener('submit', (e) => {
+    const submitBtn = form.querySelector('button[type="submit"]');
+
+    const setSubmitting = (on) => {
+      if (!submitBtn) return;
+      submitBtn.disabled = on;
+      if (!submitBtn.dataset.label) submitBtn.dataset.label = submitBtn.textContent;
+      submitBtn.textContent = on ? 'Sending…' : submitBtn.dataset.label;
+    };
+
+    form.addEventListener('submit', async (e) => {
       e.preventDefault();
+
       const fd = new FormData(form);
-      const name = fd.get('name') || '';
-      const email = fd.get('email') || '';
-      const message = fd.get('message') || '';
+      const name = String(fd.get('name') || '').trim();
+      const email = String(fd.get('email') || '').trim();
+      const message = String(fd.get('message') || '').trim();
+      const company = String(fd.get('company') || '').trim();
 
-const targetEmail = (copyBtn && copyBtn.getAttribute('data-email')) || 'pajarr2302@gmail.com';
-      const mailto = `mailto:${encodeURIComponent(targetEmail)}?subject=${encodeURIComponent('Inquiry from ' + name)}&body=${encodeURIComponent(message + '\n\nSender Email: ' + email)}`;
+      setSubmitting(true);
+      try {
+        const r = await fetch('/api/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ name, email, message, company }),
+        });
 
-      window.location.href = mailto;
-      showToast('Opening default email client...');
+        if (!r.ok) {
+          let detail = '';
+          try { detail = (await r.json()).error || ''; } catch (err) { /* ignore */ }
+          throw new Error(detail || `HTTP ${r.status}`);
+        }
+
+        form.reset();
+        showToast('Message sent. I\'ll get back to you soon.');
+      } catch (err) {
+        showToast('Send failed. Email me directly: pajarr2302@gmail.com');
+      } finally {
+        setSubmitting(false);
+      }
     });
   }
 });
