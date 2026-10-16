@@ -2414,3 +2414,79 @@ textarea.form-input {
   opacity: 0;
   pointer-events: none;
 }
+
+/* ==========================================================================
+   23. Interactive 3D Mascot Companion
+   ========================================================================== */
+.mascot-companion {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 140px;
+  height: 140px;
+  z-index: 1500;
+  cursor: pointer;
+  user-select: none;
+  filter: drop-shadow(0 14px 28px rgba(0, 0, 0, 0.28));
+  transition: transform 0.25s var(--ease-out);
+}
+
+.mascot-companion:hover {
+  transform: scale(1.08);
+}
+
+.mascot-companion canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+  pointer-events: auto;
+}
+
+.mascot-bubble {
+  position: absolute;
+  bottom: 100%;
+  right: 10px;
+  margin-bottom: 8px;
+  background: var(--surface);
+  color: var(--fg);
+  border: 1.5px solid var(--accent);
+  border-radius: var(--radius-sm);
+  padding: 0.45rem 0.75rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  box-shadow: 4px 4px 0 var(--shadow-hard);
+  opacity: 0;
+  transform: translateY(6px) scale(0.92);
+  transition: opacity 0.25s var(--ease-out), transform 0.25s var(--ease-out);
+  pointer-events: none;
+}
+
+.mascot-bubble::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  right: 24px;
+  width: 8px;
+  height: 8px;
+  background: var(--surface);
+  border-right: 1.5px solid var(--accent);
+  border-bottom: 1.5px solid var(--accent);
+  transform: rotate(45deg);
+}
+
+.mascot-bubble.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+@media (max-width: 640px) {
+  .mascot-companion {
+    bottom: 1.2rem;
+    right: 1.2rem;
+    width: 105px;
+    height: 105px;
+  }
+}

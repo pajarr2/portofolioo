@@ -983,10 +983,20 @@
     <span class="toast-msg">Email copied to clipboard!</span>
   </div>
 
+  <!-- =========================================================================
+       Interactive 3D Mascot Companion
+       ========================================================================= -->
+  <div class="mascot-companion" id="mascotCompanion" title="Interactive Mascot">
+    <div class="mascot-bubble" id="mascotBubble">Hello.</div>
+    <canvas id="mascotCanvas"></canvas>
+  </div>
+
   <script>
     document.getElementById('currentYear').textContent = new Date().getFullYear();
   </script>
+  <script src="assets/vendor/three/three.min.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/mascot.js"></script>
 </body>
 
 </html>
