@@ -40,6 +40,13 @@ module.exports = async (req, res) => {
     return res.status(502).json({ error: 'Send failed' });
   }
 
-  if (!r.ok) return res.status(502).json({ error: 'Send failed', status: r.status });
+  if (!r.ok) {
+    const errData = await r.json().catch(() => ({}));
+    return res.status(502).json({
+      error: 'Send failed',
+      status: r.status,
+      detail: errData.message || errData.name || 'Resend rejected request'
+    });
+  }
   return res.status(200).json({ ok: true });
 };

@@ -439,7 +439,11 @@ const email = copyBtn.getAttribute('data-email') || 'pajarr2302@gmail.com';
 
         if (!r.ok) {
           let detail = '';
-          try { detail = (await r.json()).error || ''; } catch (err) { /* ignore */ }
+          try {
+            const resData = await r.json();
+            detail = resData.detail || resData.error || '';
+            console.error('Contact error:', resData);
+          } catch (err) { /* ignore */ }
           throw new Error(detail || `HTTP ${r.status}`);
         }
 
