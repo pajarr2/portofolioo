@@ -47,10 +47,14 @@
   }
   </script>
 
-  <!-- Google Fonts: Anton & IBM Plex Sans & IBM Plex Mono -->
+  <!-- Google Fonts: Anton & IBM Plex Sans & IBM Plex Mono (Asynchronous non-render-blocking) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Anton&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
+  </noscript>
 
   <!-- Greenprint Engineering-Dossier Stylesheet -->
   <link rel="stylesheet" href="css/modern-style.css">
@@ -284,7 +288,7 @@
           <article class="service-card" data-reveal>
             <span class="card-index">01</span>
             <div class="service-card-art">
-              <img src="images/siarvi.png" alt="Backend Architecture">
+              <img src="images/siarvi.png" alt="Backend Architecture" loading="lazy" decoding="async">
             </div>
             <h3 class="service-card-title">Backend &amp; API Architecture</h3>
             <p class="service-card-desc">
@@ -302,7 +306,7 @@
           <article class="service-card" data-reveal>
             <span class="card-index">02</span>
             <div class="service-card-art">
-              <img src="images/siptm.png" alt="Government Systems">
+              <img src="images/siptm.png" alt="Government Systems" loading="lazy" decoding="async">
             </div>
             <h3 class="service-card-title">Healthcare &amp; Gov Systems</h3>
             <p class="service-card-desc">
@@ -319,7 +323,7 @@
           <article class="service-card" data-reveal>
             <span class="card-index">03</span>
             <div class="service-card-art">
-              <img src="images/fieldtrack.png" alt="Enterprise POS & SaaS">
+              <img src="images/fieldtrack.png" alt="Enterprise POS & SaaS" loading="lazy" decoding="async">
             </div>
             <h3 class="service-card-title">Enterprise POS &amp; SaaS</h3>
             <p class="service-card-desc">
@@ -531,7 +535,7 @@
           <article class="project-card" data-category="fullstack enterprise" data-reveal>
             <div class="project-thumb">
               <span class="project-chip">Marketplace &amp; Mobile</span>
-              <img src="images/jasakita.png" alt="JasaKita Service Marketplace and Bidding Platform" loading="lazy">
+              <img src="images/jasakita.png" alt="JasaKita Service Marketplace and Bidding Platform" loading="lazy" decoding="async">
             </div>
             <div class="project-info">
               <h3 class="project-title">JasaKita &mdash; On-Demand Service Marketplace &amp; Bidding</h3>
@@ -557,7 +561,7 @@
           <article class="project-card" data-category="fullstack" data-reveal>
             <div class="project-thumb">
               <span class="project-chip">Mobile &amp; API Integration</span>
-              <img src="images/muslimapps.png" alt="MuslimApps Mobile App Quran and Prayer Times" loading="lazy">
+              <img src="images/muslimapps.png" alt="MuslimApps Mobile App Quran and Prayer Times" loading="lazy" decoding="async">
             </div>
             <div class="project-info">
               <h3 class="project-title">MuslimApps &mdash; Islamic Companion &amp; Quranic Mobile App</h3>
@@ -583,7 +587,7 @@
           <article class="project-card" data-category="fullstack enterprise" data-reveal>
             <div class="project-thumb">
               <span class="project-chip">E-Commerce &amp; Tool</span>
-              <img src="images/sijukut.png" alt="JukutTaman SiJukut Lawn Estimator" loading="lazy">
+              <img src="images/sijukut.png" alt="JukutTaman SiJukut Lawn Estimator" loading="lazy" decoding="async">
             </div>
             <div class="project-info">
               <h3 class="project-title">JukutTaman (SiJukut) &mdash; Lawn Supply &amp; Dynamic Cost Estimator</h3>
@@ -609,7 +613,7 @@
           <article class="project-card" data-category="healthtech" data-reveal>
             <div class="project-thumb">
               <span class="project-chip">Gov / Healthtech</span>
-              <img src="images/siarvi.png" alt="Siarvi Arbovirosis DBD" loading="lazy">
+              <img src="images/siarvi.png" alt="Siarvi Arbovirosis DBD" loading="lazy" decoding="async">
             </div>
             <div class="project-info">
               <h3 class="project-title">Siarvi - Surveilans Penyakit DBD Kemenkes</h3>
@@ -634,7 +638,7 @@
           <article class="project-card" data-category="healthtech" data-reveal>
             <div class="project-thumb">
               <span class="project-chip">Gov / Healthtech</span>
-              <img src="images/siptm.png" alt="SiPTM Diabetes" loading="lazy">
+              <img src="images/siptm.png" alt="SiPTM Diabetes" loading="lazy" decoding="async">
             </div>
             <div class="project-info">
               <h3 class="project-title">SiPTM - Monitoring Faktor Risiko Diabetes</h3>
@@ -659,7 +663,7 @@
           <article class="project-card" data-category="fullstack" data-reveal>
             <div class="project-thumb">
               <span class="project-chip">SaaS / Fullstack</span>
-              <img src="images/fieldtrack.png" alt="FieldTrack Task Management" loading="lazy">
+              <img src="images/fieldtrack.png" alt="FieldTrack Task Management" loading="lazy" decoding="async">
             </div>
             <div class="project-info">
               <h3 class="project-title">FieldTrack - Team Task &amp; Operations Hub</h3>
@@ -684,7 +688,7 @@
           <article class="project-card" data-category="healthtech" data-reveal>
             <div class="project-thumb">
               <span class="project-chip">Gov / Standards</span>
-              <img src="images/farmakope.png" alt="Farmakope Indonesia" loading="lazy">
+              <img src="images/farmakope.png" alt="Farmakope Indonesia" loading="lazy" decoding="async">
             </div>
             <div class="project-info">
               <h3 class="project-title">Farmalkes - Elektronik Suplemen Farmakope</h3>
@@ -708,7 +712,7 @@
           <article class="project-card" data-category="healthtech" data-reveal>
             <div class="project-thumb">
               <span class="project-chip">Gov / Health</span>
-              <img src="images/efilca.png" alt="E-FILCA POPM" loading="lazy">
+              <img src="images/efilca.png" alt="E-FILCA POPM" loading="lazy" decoding="async">
             </div>
             <div class="project-info">
               <h3 class="project-title">E-FILCA - Agregasi POPM Kecacingan</h3>
@@ -733,7 +737,7 @@
           <article class="project-card" data-category="enterprise" data-reveal>
             <div class="project-thumb">
               <span class="project-chip">Retail POS</span>
-              <img src="images/cafe.png" alt="Cafe POS System" loading="lazy">
+              <img src="images/cafe.png" alt="Cafe POS System" loading="lazy" decoding="async">
             </div>
             <div class="project-info">
               <h3 class="project-title">Cafe Cashier &amp; Stock Inventory POS</h3>
@@ -758,7 +762,7 @@
           <article class="project-card" data-category="enterprise" data-reveal>
             <div class="project-thumb">
               <span class="project-chip">Logistics</span>
-              <img src="images/inalog.png" alt="Inalog Logistics" loading="lazy">
+              <img src="images/inalog.png" alt="Inalog Logistics" loading="lazy" decoding="async">
             </div>
             <div class="project-info">
               <h3 class="project-title">Inalog - Logistik &amp; Pergudangan</h3>
@@ -783,7 +787,7 @@
           <article class="project-card" data-category="fullstack" data-reveal>
             <div class="project-thumb">
               <span class="project-chip">Public Service</span>
-              <img src="images/pemas-2.png" alt="Pengaduan Siswa" loading="lazy">
+              <img src="images/pemas-2.png" alt="Pengaduan Siswa" loading="lazy" decoding="async">
             </div>
             <div class="project-info">
               <h3 class="project-title">Sistem Pengaduan Aspirasi Siswa &amp; Warga</h3>
@@ -808,7 +812,7 @@
           <article class="project-card" data-category="enterprise" data-reveal>
             <div class="project-thumb">
               <span class="project-chip">Retail POS</span>
-              <img src="images/barber.png" alt="Barbershop POS" loading="lazy">
+              <img src="images/barber.png" alt="Barbershop POS" loading="lazy" decoding="async">
             </div>
             <div class="project-info">
               <h3 class="project-title">Barbershop Cashier &amp; Booking Management</h3>
@@ -833,7 +837,7 @@
           <article class="project-card" data-category="enterprise" data-reveal>
             <div class="project-thumb">
               <span class="project-chip">Info System</span>
-              <img src="images/perpus.png" alt="Library System" loading="lazy">
+              <img src="images/perpus.png" alt="Library System" loading="lazy" decoding="async">
             </div>
             <div class="project-info">
               <h3 class="project-title">Digital Library Circulation System</h3>
@@ -994,9 +998,32 @@
   <script>
     document.getElementById('currentYear').textContent = new Date().getFullYear();
   </script>
-  <script src="assets/vendor/three/three.min.js"></script>
   <script src="js/main.js"></script>
-  <script src="js/mascot.js"></script>
+  <script>
+    // Defer 3D mascot until first user interaction or idle timeout to ensure 100% performance on critical path
+    (function () {
+      var loaded = false;
+      function initMascot() {
+        if (loaded) return;
+        loaded = true;
+        ['mousemove', 'touchstart', 'scroll', 'keydown'].forEach(function (e) {
+          window.removeEventListener(e, initMascot, { passive: true });
+        });
+        var sThree = document.createElement('script');
+        sThree.src = 'assets/vendor/three/three.min.js';
+        sThree.onload = function () {
+          var sMascot = document.createElement('script');
+          sMascot.src = 'js/mascot.js';
+          document.body.appendChild(sMascot);
+        };
+        document.body.appendChild(sThree);
+      }
+      ['mousemove', 'touchstart', 'scroll', 'keydown'].forEach(function (e) {
+        window.addEventListener(e, initMascot, { passive: true, once: true });
+      });
+      setTimeout(initMascot, 3500);
+    })();
+  </script>
 </body>
 
 </html>

@@ -335,8 +335,8 @@ button {
 }
 
 .btn-solid {
-  background: var(--accent);
-  border-color: var(--accent);
+  background: var(--accent-strong);
+  border-color: var(--accent-strong);
   color: var(--accent-contrast);
   box-shadow: 3px 3px 0 var(--shadow-hard);
 }
@@ -907,13 +907,20 @@ html.has-cursor button {
    8. Tech Stack Ticker
    -------------------------------------------------------------------------- */
 .ticker-band {
-  background: var(--green);
+  background: var(--green-deep);
   color: #ffffff;
   overflow: hidden;
   padding: 1.15rem 0;
   border-top: 1px solid rgba(0, 0, 0, 0.12);
   border-bottom: 1px solid rgba(0, 0, 0, 0.12);
   user-select: none;
+}
+
+[data-theme="inverted"] .ticker-band {
+  background: #021614;
+  color: var(--green-bright);
+  border-top-color: rgba(255, 255, 255, 0.08);
+  border-bottom-color: rgba(255, 255, 255, 0.08);
 }
 
 .ticker-track {
