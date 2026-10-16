@@ -20,7 +20,7 @@ module.exports = async (req, res) => {
   }
 
   const key = process.env.RESEND_API_KEY;
-  const to = process.env.CONTACT_TO || 'pajarr2302@gmail.com';
+  const to = process.env.CONTACT_TO || 'pajarcoding@gmail.com';
   if (!key) return res.status(500).json({ error: 'Server not configured' });
 
   let r;
