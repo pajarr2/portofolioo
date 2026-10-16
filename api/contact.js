@@ -19,8 +19,8 @@ module.exports = async (req, res) => {
     return res.status(400).json({ error: 'Invalid input' });
   }
 
-  const key = process.env.RESEND_API_KEY;
-  const to = process.env.CONTACT_TO || 'pajarcoding@gmail.com';
+  const key = (process.env.RESEND_API_KEY || '').trim();
+  const to = (process.env.CONTACT_TO || 'pajarcoding@gmail.com').trim();
   if (!key) return res.status(500).json({ error: 'Server not configured' });
 
   let r;
