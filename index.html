@@ -7,24 +7,24 @@
   <!-- Primary Meta Tags -->
   <title>Pajar &bull; Software Engineer &amp; Backend Specialist</title>
   <meta name="title" content="Pajar • Software Engineer & Backend Specialist">
-  <meta name="description" content="Pajar is a Software Engineer specializing in backend architecture, scalable web systems, and fullstack applications with Laravel, CakePHP, Go, Python, and Next.js.">
-  <meta name="keywords" content="Pajar, Software Engineer, Backend Developer, Fullstack Developer, Laravel, CakePHP, Golang, Python, Next.js, JukutTaman, Siarvi, SiPTM, Web Development, Portfolio">
+  <meta name="description" content="Pajar is a Software Engineer with 3+ years of experience building and maintaining enterprise web applications for retail, ERP, logistics, HRIS, and government systems.">
+  <meta name="keywords" content="Pajar, Software Engineer, Backend Developer, Fullstack Developer, Laravel, Node.js, React.js, Next.js, Vue.js, JukutTaman, Siarvi, SiPTM, Web Development, Portfolio">
   <meta name="author" content="Pajar">
   <meta name="robots" content="index, follow">
-  <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
 
   <!-- Open Graph / Facebook / LinkedIn / WhatsApp Rich Link Previews -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Pajar • Software Engineer Portfolio">
   <meta property="og:description" content="Transforming business logic into resilient backends, national health platforms, and high-impact web applications.">
-  <meta property="og:image" content="images/pajar_hero_portrait.jpg">
+  <meta property="og:image" content="images/og-image.png">
   <meta property="og:site_name" content="Pajar Portfolio">
 
   <!-- Twitter / X Card Meta Tags -->
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:title" content="Pajar • Software Engineer Portfolio">
   <meta property="twitter:description" content="Transforming business logic into resilient backends, national health platforms, and high-impact web applications.">
-  <meta property="twitter:image" content="images/pajar_hero_portrait.jpg">
+  <meta property="twitter:image" content="images/og-image.png">
 
   <!-- Google Structured Data (JSON-LD Schema.org) -->
   <script type="application/ld+json">
@@ -33,8 +33,8 @@
     "@type": "Person",
     "name": "Pajar",
     "jobTitle": "Software Engineer",
-    "description": "Software Engineer specializing in backend architecture, scalable web applications, and healthcare surveillance platforms.",
-    "knowsAbout": ["Laravel", "CakePHP", "Golang", "Python", "Next.js", "MySQL", "PostgreSQL", "REST APIs", "System Architecture"],
+    "description": "Software Engineer with 3+ years of experience building and maintaining enterprise web applications for retail, ERP, logistics, HRIS, and government systems.",
+    "knowsAbout": ["Laravel", "PHP", "JavaScript", "TypeScript", "React.js", "Next.js", "Vue.js", "Angular", "Node.js", "PostgreSQL", "MySQL", "REST APIs", "Redis", "Nginx", "Linux"],
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Bogor",
@@ -47,39 +47,63 @@
   }
   </script>
 
-  <!-- Google Fonts: Syne & Plus Jakarta Sans & JetBrains Mono -->
+  <!-- Google Fonts: Anton & IBM Plex Sans & IBM Plex Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Syne:wght@700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- Modern Neo-Brutalist Electric Stylesheet -->
+  <!-- Greenprint Engineering-Dossier Stylesheet -->
   <link rel="stylesheet" href="css/modern-style.css">
+
+  <!-- Theme boot: apply saved (or ?theme=inverted) theme before first paint -->
+  <script>
+    (function () {
+      try {
+        var root = document.documentElement;
+        var query = new URLSearchParams(window.location.search);
+        if (query.get('theme') === 'inverted') {
+          root.setAttribute('data-theme', 'inverted');
+        } else if (localStorage.getItem('pajar-theme') === 'inverted') {
+          root.setAttribute('data-theme', 'inverted');
+        }
+      } catch (e) { }
+    })();
+  </script>
 </head>
 
 <body>
 
+  <!-- Scroll progress hairline & custom cursor -->
+  <div class="scroll-progress" aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"></div>
+  <div class="cursor-dot" aria-hidden="true"></div>
+
   <!-- =========================================================================
-       Header & Navigation (Electric Blue Navbar)
+       Header & Navigation
        ========================================================================= -->
   <header class="site-header">
     <div class="container header-inner">
-      <a href="#hero" class="brand-icon-logo">
-        <span class="brand-pill-icon"></span>
+      <a href="#hero" class="brand">
+        <span class="brand-mark" aria-hidden="true"></span>
         pajar.
       </a>
 
-      <nav>
-        <ul class="nav-links-list">
-          <li><a href="#about" class="nav-link-item">About</a></li>
-          <li><a href="#services" class="nav-link-item">Services</a></li>
-          <li><a href="#portfolio" class="nav-link-item">Portfolio</a></li>
-          <li><a href="#contact" class="nav-link-item">Contact</a></li>
+      <nav class="site-nav" aria-label="Primary">
+        <ul class="nav-list">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
       </nav>
 
-      <div>
-        <a href="#contact" class="btn-pill-white">Contact Us</a>
-        <button class="mobile-menu-btn" aria-label="Toggle Menu">
+      <div class="header-actions">
+        <button class="theme-toggle" type="button" aria-label="Toggle color theme" aria-pressed="false" title="Invert theme">
+          <span class="theme-toggle-icon" aria-hidden="true"></span>
+        </button>
+        <a href="#contact" class="btn btn-solid header-cta">Contact Us</a>
+        <button class="mobile-menu-btn" type="button" aria-label="Toggle Menu" aria-expanded="false">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
             <line x1="3" y1="12" x2="21" y2="12"></line>
             <line x1="3" y1="6" x2="21" y2="6"></line>
@@ -91,11 +115,12 @@
 
     <!-- Mobile Nav Drawer -->
     <div class="mobile-nav-drawer">
-      <a href="#about" class="nav-link-item">About</a>
-      <a href="#services" class="nav-link-item">Services</a>
-      <a href="#portfolio" class="nav-link-item">Portfolio</a>
-      <a href="#contact" class="nav-link-item">Contact</a>
-      <a href="assets/Pajar - Curriculum Vitae.pdf" target="_blank" class="btn-pill-lime" download>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#services" class="nav-link">Services</a>
+      <a href="#experience" class="nav-link">Experience</a>
+      <a href="#portfolio" class="nav-link">Portfolio</a>
+      <a href="#contact" class="nav-link">Contact</a>
+      <a href="assets/CV_Pajar_Software_Engineer.pdf" target="_blank" class="btn btn-solid drawer-cv" download>
         Download CV
       </a>
     </div>
@@ -103,270 +128,425 @@
 
   <main>
     <!-- =========================================================================
-         Hero Section (Boozt Agency Layout: Giant Neon Lime Text & Phone Mockup)
+         Hero — Giant Poster Type + Terminal Console Portrait
          ========================================================================= -->
-    <section class="hero-boozt-section" id="hero">
-      <div class="container hero-main-layout">
+    <section class="hero" id="hero">
+      <div class="container">
 
-        <!-- Giant Neon Lime Heading -->
-        <h1 class="hero-giant-heading">
-          <span class="heading-line">BUILD</span>
-          <span class="heading-line">NOW</span>
+        <div class="hero-meta">
+          <span class="mono-tag">// Software Engineer</span>
+          <span class="mono-tag">Bogor, ID &mdash; UTC+7</span>
+        </div>
+
+        <h1 class="hero-heading">
+          <span class="hero-line hero-line--solid" style="--i:0">BUILD</span>
+          <span class="hero-line hero-line--outline" style="--i:1">NOW</span>
         </h1>
 
-        <!-- Left & Right Columns Overlay -->
-        <div class="hero-content-columns">
+        <div class="hero-grid">
 
-          <!-- Left Intro Column -->
-          <div class="hero-left-intro">
+          <div class="hero-intro">
             <p>
               Welcome to Pajar's engineering hub, transforming complex business logic into high-performance web systems
               and APIs that pack a punch!
             </p>
-            <a href="#portfolio" class="btn-pill-lime">Explore Works</a>
+            <a href="#portfolio" class="btn btn-solid">Explore Works</a>
           </div>
 
-          <!-- Center Smartphone Mockup (Overlapping Element) -->
-          <div class="hero-phone-mockup-wrap">
-            <div class="phone-screen-content">
-              <div class="phone-pattern-bg"></div>
-
-              <!-- Top Social Tabs -->
-              <div class="phone-top-tabs">
-                <span>Following</span>
-                <span class="active">For you</span>
-              </div>
-
-              <!-- Portrait Photo -->
-              <img src="images/pajar_hero_portrait.jpg" alt="Pajar Software Engineer" class="phone-portrait-img">
-
-              <!-- Side Action Pills (Reels/TikTok style from reference) -->
-              <div class="phone-side-actions">
-                <div class="phone-action-pill" title="PHP / Go">&hearts;</div>
-                <div class="phone-action-pill" title="Fullstack">&hellip;</div>
-                <div class="phone-action-pill" title="Share">&nearr;</div>
-              </div>
+          <div class="hero-metrics">
+            <div class="metric">
+              <div class="metric-val" data-count>3+</div>
+              <div class="metric-lbl">Years Experience</div>
             </div>
-          </div>
-
-          <!-- Right Metrics Column -->
-          <div class="hero-right-metrics">
-            <div class="hero-metric-item">
-              <div class="metric-val">+11</div>
-              <div class="metric-lbl">Delivered Projects</div>
+            <div class="metric">
+              <div class="metric-val" data-count>24M</div>
+              <div class="metric-lbl">Records Optimized</div>
             </div>
-            <div class="hero-metric-item">
-              <div class="metric-val">+4</div>
-              <div class="metric-lbl">Core Tech Stacks</div>
-            </div>
-            <div class="hero-metric-item">
-              <div class="metric-val">100<span>%</span></div>
-              <div class="metric-lbl">Production Reliability</div>
+            <div class="metric">
+              <div class="metric-val" data-count>29</div>
+              <div class="metric-lbl">Issues Resolved (5 Days)</div>
             </div>
           </div>
 
         </div>
-
       </div>
     </section>
 
     <!-- =========================================================================
-         Client / Tech Stack Ticker Ribbon (Transition Ribbon)
+         Tech Stack Ticker Ribbon
          ========================================================================= -->
-    <div class="brand-ticker-ribbon">
+    <div class="ticker-band" aria-label="Technologies">
       <div class="ticker-track">
-        <div class="ticker-brand-item">LARAVEL <span class="ticker-star">&bull;</span></div>
-        <div class="ticker-brand-item">CAKEPHP <span class="ticker-star">&bull;</span></div>
-        <div class="ticker-brand-item">GOLANG <span class="ticker-star">&bull;</span></div>
-        <div class="ticker-brand-item">PYTHON <span class="ticker-star">&bull;</span></div>
-        <div class="ticker-brand-item">NEXT.JS <span class="ticker-star">&bull;</span></div>
-        <div class="ticker-brand-item">MYSQL <span class="ticker-star">&bull;</span></div>
-        <div class="ticker-brand-item">POSTGRESQL <span class="ticker-star">&bull;</span></div>
-        <div class="ticker-brand-item">NGINX <span class="ticker-star">&bull;</span></div>
-        <div class="ticker-brand-item">REST APIS <span class="ticker-star">&bull;</span></div>
-        <div class="ticker-brand-item">LARAVEL <span class="ticker-star">&bull;</span></div>
-        <div class="ticker-brand-item">CAKEPHP <span class="ticker-star">&bull;</span></div>
-        <div class="ticker-brand-item">GOLANG <span class="ticker-star">&bull;</span></div>
-        <div class="ticker-brand-item">PYTHON <span class="ticker-star">&bull;</span></div>
-        <div class="ticker-brand-item">NEXT.JS <span class="ticker-star">&bull;</span></div>
-        <div class="ticker-brand-item">MYSQL <span class="ticker-star">&bull;</span></div>
+        <div class="ticker-group">
+          <div class="ticker-item">LARAVEL <span class="ticker-star">&bull;</span></div>
+          <div class="ticker-item">PHP <span class="ticker-star">&bull;</span></div>
+          <div class="ticker-item">VUE.JS <span class="ticker-star">&bull;</span></div>
+          <div class="ticker-item">REACT.JS <span class="ticker-star">&bull;</span></div>
+          <div class="ticker-item">NEXT.JS <span class="ticker-star">&bull;</span></div>
+          <div class="ticker-item">NODE.JS <span class="ticker-star">&bull;</span></div>
+          <div class="ticker-item">MYSQL <span class="ticker-star">&bull;</span></div>
+          <div class="ticker-item">POSTGRESQL <span class="ticker-star">&bull;</span></div>
+          <div class="ticker-item">REDIS <span class="ticker-star">&bull;</span></div>
+          <div class="ticker-item">NGINX <span class="ticker-star">&bull;</span></div>
+          <div class="ticker-item">REST API <span class="ticker-star">&bull;</span></div>
+          <div class="ticker-item">SENTRY <span class="ticker-star">&bull;</span></div>
+        </div>
+        <div class="ticker-group" aria-hidden="true">
+          <div class="ticker-item">LARAVEL <span class="ticker-star">&bull;</span></div>
+          <div class="ticker-item">PHP <span class="ticker-star">&bull;</span></div>
+          <div class="ticker-item">VUE.JS <span class="ticker-star">&bull;</span></div>
+          <div class="ticker-item">REACT.JS <span class="ticker-star">&bull;</span></div>
+          <div class="ticker-item">NEXT.JS <span class="ticker-star">&bull;</span></div>
+          <div class="ticker-item">NODE.JS <span class="ticker-star">&bull;</span></div>
+          <div class="ticker-item">MYSQL <span class="ticker-star">&bull;</span></div>
+          <div class="ticker-item">POSTGRESQL <span class="ticker-star">&bull;</span></div>
+          <div class="ticker-item">REDIS <span class="ticker-star">&bull;</span></div>
+          <div class="ticker-item">NGINX <span class="ticker-star">&bull;</span></div>
+          <div class="ticker-item">REST API <span class="ticker-star">&bull;</span></div>
+          <div class="ticker-item">SENTRY <span class="ticker-star">&bull;</span></div>
+        </div>
       </div>
     </div>
 
     <!-- =========================================================================
-         About Section (Electric Neon Lime Background)
+         About Section
          ========================================================================= -->
-    <section class="section-neon-lime" id="about">
-      <div class="container about-boozt-layout">
+    <section class="section about" id="about">
+      <div class="container">
+        <div class="section-marker" data-index="01" data-label="About"></div>
 
-        <!-- Left Title & Squircle Portrait -->
-        <div class="about-headline-block">
-          <h2>
-            <span>About</span>
-            <span>Pajar</span>
-          </h2>
+        <div class="about-layout">
+          <div class="about-headline">
+            <h2 class="display-title">
+              <span class="title-line">About</span>
+              <span class="title-line title-line--accent">Pajar</span>
+            </h2>
 
-          <div class="about-squircle-portrait">
-            <img src="images/pajar_hero_portrait.jpg" alt="Pajar Portraists">
+            <div class="about-specsheet" data-reveal>
+              <div class="spec-sheet">
+                <div class="spec-sheet-title"><span>Spec Sheet</span><span>01</span></div>
+                <div class="spec-row"><span class="spec-k">Name</span><span class="spec-v">Pajar</span></div>
+                <div class="spec-row"><span class="spec-k">Role</span><span class="spec-v">Software Engineer</span></div>
+                <div class="spec-row"><span class="spec-k">Based In</span><span class="spec-v">Bogor, West Java, ID</span></div>
+                <div class="spec-row"><span class="spec-k">Experience</span><span class="spec-v">3+ Years</span></div>
+                <div class="spec-row"><span class="spec-k">Focus</span><span class="spec-v">Enterprise Web Apps · Query Performance · Live-System Troubleshooting</span></div>
+                <div class="spec-row"><span class="spec-k">Status</span><span class="spec-v">Open to WFO — Jabodetabek</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-content" data-reveal>
+            <div class="about-top-row">
+              <span class="bracket-badge">Who?</span>
+              <a href="assets/CV_Pajar_Software_Engineer.pdf" target="_blank" class="btn btn-outline" download>
+                Download CV
+              </a>
+            </div>
+
+            <p class="about-lead">
+              Software Engineer with 3+ years of experience building and maintaining enterprise web applications
+              for retail, ERP, logistics, HRIS, and government systems.
+            </p>
+
+            <p class="about-sub">
+              Fullstack across Laravel, Node.js, React.js, Next.js, and Vue.js — with a strong focus on query
+              performance, clean and maintainable code, and live-system troubleshooting. I turn slow or
+              error-prone workflows into reliable features, working closely with business users and
+              cross-functional teams.
+            </p>
+
+            <div class="about-cta">
+              <a href="#contact" class="btn btn-solid">Work With Me &nearr;</a>
+            </div>
           </div>
         </div>
-
-        <!-- Right Content Block -->
-        <div class="about-text-content">
-          <div style="display: flex; justify-content: space-between; align-items: center;">
-            <span class="about-tag-badge">Who?</span>
-            <a href="assets/Pajar - Curriculum Vitae.pdf" target="_blank" class="btn-pill-outline-blue" download>
-              Download CV
-            </a>
-          </div>
-
-          <p class="about-lead-para">
-            I’m not your average developer, I’m a passionate Software Engineer building mission-critical
-            platforms, high-throughput backend APIs, and modern web applications across public health, retail POS, and
-            enterprise HRIS.
-          </p>
-
-          <p class="about-sub-para">
-            With hands-on experience maintaining national surveillance platforms for the Ministry of Health RI (Siarvi,
-            SiPTM, Farmakope, E-FILCA) as well as collaborative fullstack systems with Next.js and AdonisJS, I focus on
-            clean code, database optimization, and scalable architectures that empower organizations.
-          </p>
-
-          <div style="margin-top: 1rem;">
-            <a href="#contact" class="btn-pill-blue">Work With Me &nearr;</a>
-          </div>
-        </div>
-
       </div>
     </section>
 
     <!-- =========================================================================
-         Services / Capabilities Section (Neon Lime Background with Squircle Cards)
+         Services Section
          ========================================================================= -->
-    <section class="services-boozt-section" id="services">
+    <section class="section section--alt services" id="services">
       <div class="container">
+        <div class="section-marker" data-index="02" data-label="Services"></div>
 
-        <div class="services-header-row">
-          <h2 class="services-main-title">
-            <span>Engineering</span>
-            <span>Services</span>
+        <div class="services-header">
+          <h2 class="display-title">
+            <span class="title-line">Engineering</span>
+            <span class="title-line title-line--accent">Services</span>
           </h2>
-          <p class="services-header-desc">
+          <p class="services-desc">
             Launching robust web architectures and data-driven systems into production with reliable, clean engineering.
           </p>
         </div>
 
-        <div class="services-creative-grid">
-
-          <!-- Card 1: Backend Architecture -->
-          <div class="service-squircle-card">
-            <div class="service-card-art art-wavy">
-              <img src="images/siarvi.png" alt="Backend Architecture" style="opacity: 0.85;">
+        <div class="services-grid">
+          <article class="service-card" data-reveal>
+            <span class="card-index">01</span>
+            <div class="service-card-art">
+              <img src="images/siarvi.png" alt="Backend Architecture">
             </div>
             <h3 class="service-card-title">Backend &amp; API Architecture</h3>
             <p class="service-card-desc">
               Designing scalable RESTful APIs, high-throughput microservices, authentication systems, and optimized
               database schemas.
             </p>
-            <div class="service-tech-tags">
-              <span class="service-tag-pill">Laravel</span>
-              <span class="service-tag-pill">CakePHP</span>
-              <span class="service-tag-pill">Golang</span>
-              <span class="service-tag-pill">Python</span>
+            <div class="service-tags">
+              <span class="tag">Laravel</span>
+              <span class="tag">PHP</span>
+              <span class="tag">REST API</span>
+              <span class="tag">MySQL</span>
             </div>
-          </div>
+          </article>
 
-          <!-- Card 2: Healthcare & Government Systems -->
-          <div class="service-squircle-card">
-            <div class="service-card-art art-colorblock">
-              <img src="images/siptm.png" alt="Government Systems" style="opacity: 0.85;">
+          <article class="service-card" data-reveal>
+            <span class="card-index">02</span>
+            <div class="service-card-art">
+              <img src="images/siptm.png" alt="Government Systems">
             </div>
             <h3 class="service-card-title">Healthcare &amp; Gov Systems</h3>
             <p class="service-card-desc">
               Architecting nationwide epidemiological surveillance platforms with strict data accuracy, multi-tier
               regional access, and reporting.
             </p>
-            <div class="service-tech-tags">
-              <span class="service-tag-pill">Health Informatics</span>
-              <span class="service-tag-pill">MySQL</span>
-              <span class="service-tag-pill">GIS Analytics</span>
+            <div class="service-tags">
+              <span class="tag">Health Informatics</span>
+              <span class="tag">MySQL</span>
+              <span class="tag">REST API</span>
             </div>
-          </div>
+          </article>
 
-          <!-- Card 3: Enterprise POS & SaaS -->
-          <div class="service-squircle-card">
-            <div class="service-card-art art-pattern">
-              <img src="images/fieldtrack.png" alt="Enterprise POS & SaaS" style="opacity: 0.85;">
+          <article class="service-card" data-reveal>
+            <span class="card-index">03</span>
+            <div class="service-card-art">
+              <img src="images/fieldtrack.png" alt="Enterprise POS & SaaS">
             </div>
             <h3 class="service-card-title">Enterprise POS &amp; SaaS</h3>
             <p class="service-card-desc">
               Building real-time point-of-sale inventory engines, automated financial reports, thermal print
               integration, and collaboration tools.
             </p>
-            <div class="service-tech-tags">
-              <span class="service-tag-pill">Next.js</span>
-              <span class="service-tag-pill">AdonisJS</span>
-              <span class="service-tag-pill">POS Engines</span>
+            <div class="service-tags">
+              <span class="tag">Next.js</span>
+              <span class="tag">Node.js</span>
+              <span class="tag">Redis</span>
             </div>
-          </div>
-
+          </article>
         </div>
-
       </div>
     </section>
 
     <!-- =========================================================================
-         Portfolio Section (Deep Electric Blue Background)
+         Experience Section — Career Timeline (from CV)
          ========================================================================= -->
-    <section class="portfolio-boozt-section" id="portfolio">
+    <section class="section experience" id="experience">
       <div class="container">
+        <div class="section-marker" data-index="03" data-label="Experience"></div>
 
-        <div class="portfolio-header-flex">
-          <h2 class="portfolio-giant-title">
-            <span>Selected</span>
-            <span>Portfolio</span>
+        <div class="exp-header">
+          <h2 class="display-title">
+            <span class="title-line">Work</span>
+            <span class="title-line title-line--accent">Experience</span>
+          </h2>
+          <p class="exp-header-desc">
+            Career timeline across retail, ERP, logistics, and government systems.
+          </p>
+        </div>
+
+        <div class="exp-timeline">
+
+          <!-- Company: Alturian -->
+          <article class="exp-entry" data-reveal>
+            <div class="exp-company-row">
+              <span class="exp-company">Alturian</span>
+              <span class="exp-company-period">Jun 2024 &ndash; Present</span>
+            </div>
+
+            <div class="exp-role">
+              <div class="exp-role-head">
+                <h3 class="exp-role-title">Software Engineer Specialist</h3>
+                <span class="exp-period">Apr 2026 &ndash; Present</span>
+              </div>
+              <div class="exp-stack">Stack: Laravel, PHP, Vue.js, Angular, WebSocket, Sentry, Git</div>
+              <ul class="exp-list">
+                <li>Own complex issues and enhancements across E-Commerce, ERP, Merchandising, and HRIS systems, with primary ownership of E-Commerce.</li>
+                <li>Resolved and enhanced 29 E-Commerce issues within 5 working days, covering complex ordering flows and improving production readiness ahead of schedule.</li>
+                <li>Contribute to major retail projects serving operations in Japan, Myanmar, and Indonesia.</li>
+                <li>Automate manual operational processes to improve efficiency across business workflows.</li>
+                <li>Analyze complex business and technical cases, recommend implementation approaches, and mentor junior developers on code quality and safer solutions.</li>
+                <li>Provide debugging and troubleshooting support for live systems in collaboration with business users.</li>
+              </ul>
+            </div>
+
+            <div class="exp-role">
+              <div class="exp-role-head">
+                <h3 class="exp-role-title">Software Engineer</h3>
+                <span class="exp-period">Apr 2025 &ndash; Mar 2026</span>
+              </div>
+              <div class="exp-stack">Stack: Laravel, PHP, Vue.js, Angular, Redis, PostgreSQL, Frontend UI integration</div>
+              <ul class="exp-list">
+                <li>Primary developer for 8 major modules and support for 2 more across Invoicing, Supplier Deposit, Supplier Loan, and ERP systems.</li>
+                <li>Optimized a report query over approximately 24 million invoice-item records, reducing execution time from about 192 seconds to 8-12 seconds.</li>
+                <li>Refactored existing modules for readability and maintainability, so other developers can continue and extend them faster.</li>
+                <li>Introduced safer coding practices for model relationships and data access, preventing runtime errors when related data is missing.</li>
+                <li>Moved heavy export operations to asynchronous Laravel Jobs, keeping the application responsive during long-running processes.</li>
+              </ul>
+            </div>
+
+            <div class="exp-role">
+              <div class="exp-role-head">
+                <h3 class="exp-role-title">Junior Software Engineer</h3>
+                <span class="exp-period">Jun 2024 &ndash; Mar 2025</span>
+              </div>
+              <div class="exp-stack">Stack: Laravel, Angular, Vue.js, WebSocket, Sentry, SQL</div>
+              <ul class="exp-list">
+                <li>Maintained and enhanced an ordering system used by approximately 400-500 users with Laravel, Angular, and Vue.js.</li>
+                <li>Replaced long polling with WebSocket-based communication in Live Chat and Call features for more efficient real-time interaction.</li>
+                <li>Investigated and resolved HTTP 500 errors, application errors, and business-logic issues across ordering workflows.</li>
+                <li>Improved reliability with safer try-catch error handling and Sentry for error tracking and monitoring.</li>
+                <li>Delivered bug fixes and feature requests on a regular basis, supporting continuous improvement of the ordering platform.</li>
+                <li>Employee of the Month: August 2024 and January 2025.</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Company: PT Zamasco Mitra Solusindo -->
+          <article class="exp-entry" data-reveal>
+            <div class="exp-company-row">
+              <span class="exp-company">PT Zamasco Mitra Solusindo</span>
+              <span class="exp-company-period">Jun 2023 &ndash; May 2024</span>
+            </div>
+            <div class="exp-role">
+              <div class="exp-role-head">
+                <h3 class="exp-role-title">Fullstack Developer</h3>
+                <span class="exp-period">Jun 2023 &ndash; May 2024</span>
+              </div>
+              <div class="exp-stack">Stack: Laravel, PHP, Redis, REST API, SQL</div>
+              <ul class="exp-list">
+                <li>Primary developer of a Warehouse Management System (WMS) supporting nationwide logistics operations for BNPB, covering courier management, item scanning, shipment tracking, inventory, and stock replenishment.</li>
+                <li>Optimized database queries and data upload processes for nationwide inventory data and high-volume concurrent uploads from Ministry users.</li>
+                <li>Integrated REST/JSON APIs with BNPB monitoring systems to provide equipment monitoring dashboards.</li>
+                <li>Built a disease reporting information system for the Ministry of Health (dengue fever and helminthiasis) with dashboards, reporting workflows, and offline data entry, processing about 15,000 reports per month.</li>
+                <li>Strengthened application security after identifying SQL injection risks, by improving validation and data handling across the codebase.</li>
+                <li>Deployed applications to servers and maintained infrastructure using Redis and server-side configuration.</li>
+                <li>Co-developed a real-time vote-recording application for a political organization using Laravel, with secure storage and real-time processing of voting data.</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Company: PT Immobi Solusi Prima -->
+          <article class="exp-entry" data-reveal>
+            <div class="exp-company-row">
+              <span class="exp-company">PT Immobi Solusi Prima</span>
+              <span class="exp-company-period">Jul 2022 &ndash; Jan 2023</span>
+            </div>
+            <div class="exp-role">
+              <div class="exp-role-head">
+                <h3 class="exp-role-title">Backend Developer (Internship)</h3>
+                <span class="exp-period">Jul 2022 &ndash; Jan 2023</span>
+              </div>
+              <div class="exp-stack">Stack: Node.js, AdonisJS, Express.js, Next.js, PostgreSQL, Nginx, Git, CI/CD</div>
+              <ul class="exp-list">
+                <li>Built and maintained 10-15 REST API endpoints (JSON) for an internal Task Management System used by 10-50 users: authentication, Kanban CRUD, dashboard, and master data.</li>
+                <li>Optimized retrieval of the latest Kanban state, cutting response time from about 2 seconds to milliseconds in the tested implementation.</li>
+                <li>Contributed to the backend of an ERP invoicing module.</li>
+                <li>Supported staging and production deployments and resolved deployment issues within the same working day.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+
+        <!-- Education & Certifications -->
+        <div class="exp-meta" data-reveal>
+          <div class="exp-meta-block">
+            <div class="exp-meta-title">Education</div>
+            <div class="exp-meta-row">
+              <span class="exp-meta-name">University of Siber Asia</span>
+              <span class="exp-meta-detail">Bachelor's Degree (S1) in Information System &mdash; Jan 2025 &ndash; Present (Currently Enrolled)</span>
+            </div>
+            <div class="exp-meta-row">
+              <span class="exp-meta-name">Wikrama Vocational High School</span>
+              <span class="exp-meta-detail">Software Engineering &mdash; Jul 2020 &ndash; May 2023</span>
+            </div>
+          </div>
+          <div class="exp-meta-block">
+            <div class="exp-meta-title">Certifications &amp; Awards</div>
+            <div class="exp-meta-row">
+              <span class="exp-meta-name">BNSP</span>
+              <span class="exp-meta-detail">Software Engineering</span>
+            </div>
+            <div class="exp-meta-row">
+              <span class="exp-meta-name">Certiport</span>
+              <span class="exp-meta-detail">IT Specialist</span>
+            </div>
+            <div class="exp-meta-row">
+              <span class="exp-meta-name">Employee of the Month</span>
+              <span class="exp-meta-detail">Alturian &mdash; August 2024 &amp; January 2025</span>
+            </div>
+            <div class="exp-meta-row">
+              <span class="exp-meta-name">Internship Certificate</span>
+              <span class="exp-meta-detail">PT Immobi Solusi Prima</span>
+            </div>
+          </div>
+        </div>
+
+        <p class="exp-languages">Languages: Indonesian &mdash; C1 Advanced &nbsp;|&nbsp; English &mdash; B1 Intermediate</p>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         Portfolio Section — Deep Green Dossier
+         ========================================================================= -->
+    <section class="section section--deep portfolio" id="portfolio">
+      <div class="container">
+        <div class="section-marker section-marker--deep" data-index="04" data-label="Portfolio"></div>
+
+        <div class="portfolio-header">
+          <h2 class="display-title">
+            <span class="title-line">Selected</span>
+            <span class="title-line title-line--bright">Portfolio</span>
           </h2>
           <div class="portfolio-header-right">
             <p>
               Check out my production-tested systems, government surveillance platforms, and enterprise solutions.
             </p>
             <div>
-              <a href="#contact" class="btn-pill-lime">Start a Project</a>
+              <a href="#contact" class="btn btn-solid">Start a Project</a>
             </div>
           </div>
         </div>
 
         <!-- Filter Pills -->
-        <div class="portfolio-filter-row">
-          <button class="filter-btn-pill active" data-filter="all">All Projects (11)</button>
-          <button class="filter-btn-pill" data-filter="healthtech">Healthcare &amp; Gov</button>
-          <button class="filter-btn-pill" data-filter="enterprise">Enterprise &amp; POS</button>
-          <button class="filter-btn-pill" data-filter="fullstack">Fullstack &amp; SaaS</button>
+        <div class="filter-row" role="group" aria-label="Filter projects">
+          <button class="filter-btn is-active" type="button" data-filter="all">All Projects (11)</button>
+          <button class="filter-btn" type="button" data-filter="healthtech">Healthcare &amp; Gov</button>
+          <button class="filter-btn" type="button" data-filter="enterprise">Enterprise &amp; POS</button>
+          <button class="filter-btn" type="button" data-filter="fullstack">Fullstack &amp; SaaS</button>
         </div>
 
         <!-- Projects Grid -->
-        <div class="portfolio-projects-grid">
+        <div class="projects-grid">
 
           <!-- 00: Sijukut / JukutTaman -->
-          <article class="project-squircle-card" data-category="fullstack enterprise">
-            <div class="project-card-thumbnail">
-              <span class="project-category-chip">E-Commerce &amp; Tool</span>
+          <article class="project-card" data-category="fullstack enterprise" data-reveal>
+            <div class="project-thumb">
+              <span class="project-chip">E-Commerce &amp; Tool</span>
               <img src="images/sijukut.png" alt="JukutTaman SiJukut Lawn Estimator" loading="lazy">
             </div>
-            <div class="project-card-info">
-              <h3 class="project-item-title">JukutTaman (SiJukut) &mdash; Lawn Supply &amp; Dynamic Cost Estimator</h3>
-              <p class="project-item-desc">
+            <div class="project-info">
+              <h3 class="project-title">JukutTaman (SiJukut) &mdash; Lawn Supply &amp; Dynamic Cost Estimator</h3>
+              <p class="project-desc">
                 Platform e-commerce dan kalkulator estimasi biaya rumput taman interaktif dengan slider luas area
                 dinamis, pemilihan varietas rumput, kalkulasi jasa tanam, dan direct WhatsApp order integration.
               </p>
-              <div class="project-tech-chips-row">
-                <span class="proj-tech-chip">Laravel / Next.js</span>
-                <span class="proj-tech-chip">TailwindCSS</span>
-                <span class="proj-tech-chip">Dynamic Calculator</span>
-                <span class="proj-tech-chip">WhatsApp API</span>
+              <div class="project-tags">
+                <span class="tag tag--mono">Laravel / Next.js</span>
+                <span class="tag tag--mono">TailwindCSS</span>
+                <span class="tag tag--mono">Dynamic Calculator</span>
+                <span class="tag tag--mono">WhatsApp API</span>
               </div>
-              <div class="project-bottom-action">
-                <button class="btn-explore-project">
+              <div class="project-action">
+                <button class="btn-explore" type="button">
                   View Full Details &nearr;
                 </button>
               </div>
@@ -374,24 +554,24 @@
           </article>
 
           <!-- 01: Siarvi -->
-          <article class="project-squircle-card" data-category="healthtech">
-            <div class="project-card-thumbnail">
-              <span class="project-category-chip">Gov / Healthtech</span>
+          <article class="project-card" data-category="healthtech" data-reveal>
+            <div class="project-thumb">
+              <span class="project-chip">Gov / Healthtech</span>
               <img src="images/siarvi.png" alt="Siarvi Arbovirosis DBD" loading="lazy">
             </div>
-            <div class="project-card-info">
-              <h3 class="project-item-title">Siarvi - Surveilans Penyakit DBD Kemenkes</h3>
-              <p class="project-item-desc">
+            <div class="project-info">
+              <h3 class="project-title">Siarvi - Surveilans Penyakit DBD Kemenkes</h3>
+              <p class="project-desc">
                 Platform surveilans epidemiologi Kemenkes RI untuk pemantauan dan pengendalian penyebaran Arbovirosis
                 skala nasional.
               </p>
-              <div class="project-tech-chips-row">
-                <span class="proj-tech-chip">CakePHP</span>
-                <span class="proj-tech-chip">MySQL</span>
-                <span class="proj-tech-chip">GIS Region</span>
+              <div class="project-tags">
+                <span class="tag tag--mono">CakePHP</span>
+                <span class="tag tag--mono">MySQL</span>
+                <span class="tag tag--mono">GIS Region</span>
               </div>
-              <div class="project-bottom-action">
-                <button class="btn-explore-project">
+              <div class="project-action">
+                <button class="btn-explore" type="button">
                   View Full Details &nearr;
                 </button>
               </div>
@@ -399,24 +579,24 @@
           </article>
 
           <!-- 02: SiPTM -->
-          <article class="project-squircle-card" data-category="healthtech">
-            <div class="project-card-thumbnail">
-              <span class="project-category-chip">Gov / Healthtech</span>
+          <article class="project-card" data-category="healthtech" data-reveal>
+            <div class="project-thumb">
+              <span class="project-chip">Gov / Healthtech</span>
               <img src="images/siptm.png" alt="SiPTM Diabetes" loading="lazy">
             </div>
-            <div class="project-card-info">
-              <h3 class="project-item-title">SiPTM - Monitoring Faktor Risiko Diabetes</h3>
-              <p class="project-item-desc">
+            <div class="project-info">
+              <h3 class="project-title">SiPTM - Monitoring Faktor Risiko Diabetes</h3>
+              <p class="project-desc">
                 Platform monitoring skrining faktor risiko penyakit tidak menular (diabetes &amp; hipertensi)
                 terintegrasi puskesmas.
               </p>
-              <div class="project-tech-chips-row">
-                <span class="proj-tech-chip">CakePHP</span>
-                <span class="proj-tech-chip">MySQL</span>
-                <span class="proj-tech-chip">Analytics</span>
+              <div class="project-tags">
+                <span class="tag tag--mono">CakePHP</span>
+                <span class="tag tag--mono">MySQL</span>
+                <span class="tag tag--mono">Analytics</span>
               </div>
-              <div class="project-bottom-action">
-                <button class="btn-explore-project">
+              <div class="project-action">
+                <button class="btn-explore" type="button">
                   View Full Details &nearr;
                 </button>
               </div>
@@ -424,24 +604,24 @@
           </article>
 
           <!-- 03: FieldTrack -->
-          <article class="project-squircle-card" data-category="fullstack">
-            <div class="project-card-thumbnail">
-              <span class="project-category-chip">SaaS / Fullstack</span>
+          <article class="project-card" data-category="fullstack" data-reveal>
+            <div class="project-thumb">
+              <span class="project-chip">SaaS / Fullstack</span>
               <img src="images/fieldtrack.png" alt="FieldTrack Task Management" loading="lazy">
             </div>
-            <div class="project-card-info">
-              <h3 class="project-item-title">FieldTrack - Team Task &amp; Operations Hub</h3>
-              <p class="project-item-desc">
+            <div class="project-info">
+              <h3 class="project-title">FieldTrack - Team Task &amp; Operations Hub</h3>
+              <p class="project-desc">
                 Aplikasi manajemen tugas kolaboratif tim lapangan dengan kanban board real-time, time tracking, dan
                 granular permissions.
               </p>
-              <div class="project-tech-chips-row">
-                <span class="proj-tech-chip">Next.js</span>
-                <span class="proj-tech-chip">AdonisJS</span>
-                <span class="proj-tech-chip">TypeScript</span>
+              <div class="project-tags">
+                <span class="tag tag--mono">Next.js</span>
+                <span class="tag tag--mono">AdonisJS</span>
+                <span class="tag tag--mono">TypeScript</span>
               </div>
-              <div class="project-bottom-action">
-                <button class="btn-explore-project">
+              <div class="project-action">
+                <button class="btn-explore" type="button">
                   View Full Details &nearr;
                 </button>
               </div>
@@ -449,23 +629,23 @@
           </article>
 
           <!-- 04: Farmakope -->
-          <article class="project-squircle-card" data-category="healthtech">
-            <div class="project-card-thumbnail">
-              <span class="project-category-chip">Gov / Standards</span>
+          <article class="project-card" data-category="healthtech" data-reveal>
+            <div class="project-thumb">
+              <span class="project-chip">Gov / Standards</span>
               <img src="images/farmakope.png" alt="Farmakope Indonesia" loading="lazy">
             </div>
-            <div class="project-card-info">
-              <h3 class="project-item-title">Farmalkes - Elektronik Suplemen Farmakope</h3>
-              <p class="project-item-desc">
+            <div class="project-info">
+              <h3 class="project-title">Farmalkes - Elektronik Suplemen Farmakope</h3>
+              <p class="project-desc">
                 Portal dokumen standarisasi mutu sediaan farmasi dan regulasi bahan baku obat Kementerian Kesehatan RI.
               </p>
-              <div class="project-tech-chips-row">
-                <span class="proj-tech-chip">CakePHP</span>
-                <span class="proj-tech-chip">PostgreSQL</span>
-                <span class="proj-tech-chip">Archive</span>
+              <div class="project-tags">
+                <span class="tag tag--mono">CakePHP</span>
+                <span class="tag tag--mono">PostgreSQL</span>
+                <span class="tag tag--mono">Archive</span>
               </div>
-              <div class="project-bottom-action">
-                <button class="btn-explore-project">
+              <div class="project-action">
+                <button class="btn-explore" type="button">
                   View Full Details &nearr;
                 </button>
               </div>
@@ -473,24 +653,24 @@
           </article>
 
           <!-- 05: E-FILCA -->
-          <article class="project-squircle-card" data-category="healthtech">
-            <div class="project-card-thumbnail">
-              <span class="project-category-chip">Gov / Health</span>
+          <article class="project-card" data-category="healthtech" data-reveal>
+            <div class="project-thumb">
+              <span class="project-chip">Gov / Health</span>
               <img src="images/efilca.png" alt="E-FILCA POPM" loading="lazy">
             </div>
-            <div class="project-card-info">
-              <h3 class="project-item-title">E-FILCA - Agregasi POPM Kecacingan</h3>
-              <p class="project-item-desc">
+            <div class="project-info">
+              <h3 class="project-title">E-FILCA - Agregasi POPM Kecacingan</h3>
+              <p class="project-desc">
                 Sistem agregasi pemberian obat pencegahan massal (POPM) kecacingan nasional untuk pemantauan intervensi
                 anak sekolah.
               </p>
-              <div class="project-tech-chips-row">
-                <span class="proj-tech-chip">Laravel</span>
-                <span class="proj-tech-chip">MySQL</span>
-                <span class="proj-tech-chip">Validation</span>
+              <div class="project-tags">
+                <span class="tag tag--mono">Laravel</span>
+                <span class="tag tag--mono">MySQL</span>
+                <span class="tag tag--mono">Validation</span>
               </div>
-              <div class="project-bottom-action">
-                <button class="btn-explore-project">
+              <div class="project-action">
+                <button class="btn-explore" type="button">
                   View Full Details &nearr;
                 </button>
               </div>
@@ -498,24 +678,24 @@
           </article>
 
           <!-- 06: Cafe POS -->
-          <article class="project-squircle-card" data-category="enterprise">
-            <div class="project-card-thumbnail">
-              <span class="project-category-chip">Retail POS</span>
+          <article class="project-card" data-category="enterprise" data-reveal>
+            <div class="project-thumb">
+              <span class="project-chip">Retail POS</span>
               <img src="images/cafe.png" alt="Cafe POS System" loading="lazy">
             </div>
-            <div class="project-card-info">
-              <h3 class="project-item-title">Cafe Cashier &amp; Stock Inventory POS</h3>
-              <p class="project-item-desc">
+            <div class="project-info">
+              <h3 class="project-title">Cafe Cashier &amp; Stock Inventory POS</h3>
+              <p class="project-desc">
                 Aplikasi kasir coffee shop dengan pemotongan stok bahan baku otomatis, display kitchen order, dan
                 pelaporan omzet.
               </p>
-              <div class="project-tech-chips-row">
-                <span class="proj-tech-chip">Laravel</span>
-                <span class="proj-tech-chip">MySQL</span>
-                <span class="proj-tech-chip">Thermal Print</span>
+              <div class="project-tags">
+                <span class="tag tag--mono">Laravel</span>
+                <span class="tag tag--mono">MySQL</span>
+                <span class="tag tag--mono">Thermal Print</span>
               </div>
-              <div class="project-bottom-action">
-                <button class="btn-explore-project">
+              <div class="project-action">
+                <button class="btn-explore" type="button">
                   View Full Details &nearr;
                 </button>
               </div>
@@ -523,24 +703,24 @@
           </article>
 
           <!-- 07: Inalog -->
-          <article class="project-squircle-card" data-category="enterprise">
-            <div class="project-card-thumbnail">
-              <span class="project-category-chip">Logistics</span>
+          <article class="project-card" data-category="enterprise" data-reveal>
+            <div class="project-thumb">
+              <span class="project-chip">Logistics</span>
               <img src="images/inalog.png" alt="Inalog Logistics" loading="lazy">
             </div>
-            <div class="project-card-info">
-              <h3 class="project-item-title">Inalog - Logistik &amp; Pergudangan</h3>
-              <p class="project-item-desc">
+            <div class="project-info">
+              <h3 class="project-title">Inalog - Logistik &amp; Pergudangan</h3>
+              <p class="project-desc">
                 Sistem pergudangan enterprise untuk pelacakan pergerakan barang, servis peralatan, dan otomasi alur
                 requisition.
               </p>
-              <div class="project-tech-chips-row">
-                <span class="proj-tech-chip">CakePHP</span>
-                <span class="proj-tech-chip">MySQL</span>
-                <span class="proj-tech-chip">Asset Tracking</span>
+              <div class="project-tags">
+                <span class="tag tag--mono">CakePHP</span>
+                <span class="tag tag--mono">MySQL</span>
+                <span class="tag tag--mono">Asset Tracking</span>
               </div>
-              <div class="project-bottom-action">
-                <button class="btn-explore-project">
+              <div class="project-action">
+                <button class="btn-explore" type="button">
                   View Full Details &nearr;
                 </button>
               </div>
@@ -548,24 +728,24 @@
           </article>
 
           <!-- 08: Pengaduan Wikrama -->
-          <article class="project-squircle-card" data-category="fullstack">
-            <div class="project-card-thumbnail">
-              <span class="project-category-chip">Public Service</span>
+          <article class="project-card" data-category="fullstack" data-reveal>
+            <div class="project-thumb">
+              <span class="project-chip">Public Service</span>
               <img src="images/pemas-2.png" alt="Pengaduan Siswa" loading="lazy">
             </div>
-            <div class="project-card-info">
-              <h3 class="project-item-title">Sistem Pengaduan Aspirasi Siswa &amp; Warga</h3>
-              <p class="project-item-desc">
+            <div class="project-info">
+              <h3 class="project-title">Sistem Pengaduan Aspirasi Siswa &amp; Warga</h3>
+              <p class="project-desc">
                 Portal aspirasi transparan dengan tracking tiket status real-time, enkripsi lampiran dokumen, dan panel
                 moderasi.
               </p>
-              <div class="project-tech-chips-row">
-                <span class="proj-tech-chip">Laravel</span>
-                <span class="proj-tech-chip">MySQL</span>
-                <span class="proj-tech-chip">Ticketing</span>
+              <div class="project-tags">
+                <span class="tag tag--mono">Laravel</span>
+                <span class="tag tag--mono">MySQL</span>
+                <span class="tag tag--mono">Ticketing</span>
               </div>
-              <div class="project-bottom-action">
-                <button class="btn-explore-project">
+              <div class="project-action">
+                <button class="btn-explore" type="button">
                   View Full Details &nearr;
                 </button>
               </div>
@@ -573,24 +753,24 @@
           </article>
 
           <!-- 09: Barber POS -->
-          <article class="project-squircle-card" data-category="enterprise">
-            <div class="project-card-thumbnail">
-              <span class="project-category-chip">Retail POS</span>
+          <article class="project-card" data-category="enterprise" data-reveal>
+            <div class="project-thumb">
+              <span class="project-chip">Retail POS</span>
               <img src="images/barber.png" alt="Barbershop POS" loading="lazy">
             </div>
-            <div class="project-card-info">
-              <h3 class="project-item-title">Barbershop Cashier &amp; Booking Management</h3>
-              <p class="project-item-desc">
+            <div class="project-info">
+              <h3 class="project-title">Barbershop Cashier &amp; Booking Management</h3>
+              <p class="project-desc">
                 Aplikasi kasir multi-layanan dan komisi kapster dengan antrean treatment rambut dan rekap transaksi
                 harian.
               </p>
-              <div class="project-tech-chips-row">
-                <span class="proj-tech-chip">PHP Native</span>
-                <span class="proj-tech-chip">MySQL</span>
-                <span class="proj-tech-chip">Commissions</span>
+              <div class="project-tags">
+                <span class="tag tag--mono">PHP Native</span>
+                <span class="tag tag--mono">MySQL</span>
+                <span class="tag tag--mono">Commissions</span>
               </div>
-              <div class="project-bottom-action">
-                <button class="btn-explore-project">
+              <div class="project-action">
+                <button class="btn-explore" type="button">
                   View Full Details &nearr;
                 </button>
               </div>
@@ -598,105 +778,106 @@
           </article>
 
           <!-- 10: Perpustakaan -->
-          <article class="project-squircle-card" data-category="enterprise">
-            <div class="project-card-thumbnail">
-              <span class="project-category-chip">Info System</span>
+          <article class="project-card" data-category="enterprise" data-reveal>
+            <div class="project-thumb">
+              <span class="project-chip">Info System</span>
               <img src="images/perpus.png" alt="Library System" loading="lazy">
             </div>
-            <div class="project-card-info">
-              <h3 class="project-item-title">Digital Library Circulation System</h3>
-              <p class="project-item-desc">
+            <div class="project-info">
+              <h3 class="project-title">Digital Library Circulation System</h3>
+              <p class="project-desc">
                 Sistem sirkulasi peminjaman buku digital, kartu barcode anggota, dan perhitungan denda keterlambatan
                 otomatis.
               </p>
-              <div class="project-tech-chips-row">
-                <span class="proj-tech-chip">Laravel</span>
-                <span class="proj-tech-chip">MySQL</span>
-                <span class="proj-tech-chip">Barcode Scan</span>
+              <div class="project-tags">
+                <span class="tag tag--mono">Laravel</span>
+                <span class="tag tag--mono">MySQL</span>
+                <span class="tag tag--mono">Barcode Scan</span>
               </div>
-              <div class="project-bottom-action">
-                <button class="btn-explore-project">
+              <div class="project-action">
+                <button class="btn-explore" type="button">
                   View Full Details &nearr;
                 </button>
               </div>
             </div>
           </article>
-
         </div>
       </div>
     </section>
 
     <!-- =========================================================================
-         Contact Section (Electric Duo-Tone)
+         Contact Section — Green Band
          ========================================================================= -->
-    <section class="contact-boozt-section" id="contact">
-      <div class="container contact-layout-grid">
+    <section class="section band contact" id="contact">
+      <div class="container">
+        <div class="section-marker section-marker--band" data-index="05" data-label="Contact"></div>
 
-        <div>
-          <h2 class="contact-hero-title">
-            LET'S TALK.
-          </h2>
-          <p class="contact-desc-text">
-            Have a project, full-time engineering opportunity, or contract role? Let’s connect and create something
-            impactful together.
-          </p>
+        <div class="contact-layout">
 
-          <div class="email-copy-panel">
-            <div>
-              <div
-                style="font-size: 0.75rem; font-weight: 800; text-transform: uppercase; color: rgba(35, 22, 181, 0.6); margin-bottom: 2px;">
-                Direct Email</div>
-              <div class="email-val">pajarmaulana190@gmail.com</div>
+          <div class="contact-left" data-reveal>
+            <h2 class="display-title display-title--band">
+              LET'S TALK.
+            </h2>
+            <p class="contact-desc">
+              Have a project, full-time engineering opportunity, or contract role? Let’s connect and create something
+              impactful together.
+            </p>
+
+            <div class="email-panel">
+              <div>
+                <div class="email-label">Direct Email</div>
+                <div class="email-val">pajarr2302@gmail.com</div>
+              </div>
+              <button class="btn btn-solid btn-copy-email" type="button" data-email="pajarr2302@gmail.com">
+                Copy Email
+              </button>
             </div>
-            <button class="btn-pill-blue btn-copy-email" data-email="pajarmaulana190@gmail.com">
-              Copy Email
-            </button>
+
+            <div class="contact-social">
+              <a href="https://github.com/pajarr2" target="_blank" rel="noopener noreferrer" class="social-pill">
+                GitHub &nearr;
+              </a>
+              <a href="https://www.linkedin.com/in/pajar-09a1a023b/" target="_blank" rel="noopener noreferrer"
+                class="social-pill">
+                LinkedIn &nearr;
+              </a>
+              <a href="assets/CV_Pajar_Software_Engineer.pdf" target="_blank" class="social-pill" download>
+                Download CV &nearr;
+              </a>
+              <a href="https://maps.google.com/?q=Bogor,Indonesia" target="_blank" class="social-pill">
+                Bogor, ID
+              </a>
+            </div>
           </div>
 
-          <div class="contact-social-pills">
-            <a href="https://github.com/pajarr2" target="_blank" rel="noopener noreferrer" class="social-link-pill">
-              GitHub &nearr;
-            </a>
-            <a href="https://www.linkedin.com/in/pajar-09a1a023b/" target="_blank" rel="noopener noreferrer"
-              class="social-link-pill">
-              LinkedIn &nearr;
-            </a>
-            <a href="assets/Pajar - Curriculum Vitae.pdf" target="_blank" class="social-link-pill" download>
-              Download CV &nearr;
-            </a>
-            <a href="https://maps.google.com/?q=Bogor,Indonesia" target="_blank" class="social-link-pill">
-              Bogor, ID
-            </a>
+          <!-- Direct Inquiry Form -->
+          <div class="contact-form-card" data-reveal>
+            <form id="contactForm">
+              <div class="form-group">
+                <label class="form-label" for="senderName">Your Name</label>
+                <input type="text" id="senderName" name="name" class="form-input" placeholder="e.g. Alex Johnson"
+                  required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="senderEmail">Email Address</label>
+                <input type="email" id="senderEmail" name="email" class="form-input" placeholder="alex@company.com"
+                  required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="senderMessage">Message</label>
+                <textarea id="senderMessage" name="message" class="form-input"
+                  placeholder="Tell me about your project or role..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-solid btn-submit">
+                Send Message &nearr;
+              </button>
+            </form>
           </div>
+
         </div>
-
-        <!-- Direct Inquiry Form -->
-        <div class="contact-form-squircle">
-          <form id="contactForm">
-            <div class="form-group-item">
-              <label class="form-label-title" for="senderName">Your Name</label>
-              <input type="text" id="senderName" name="name" class="form-input-field" placeholder="e.g. Alex Johnson"
-                required>
-            </div>
-
-            <div class="form-group-item">
-              <label class="form-label-title" for="senderEmail">Email Address</label>
-              <input type="email" id="senderEmail" name="email" class="form-input-field" placeholder="alex@company.com"
-                required>
-            </div>
-
-            <div class="form-group-item">
-              <label class="form-label-title" for="senderMessage">Message</label>
-              <textarea id="senderMessage" name="message" class="form-input-field"
-                placeholder="Tell me about your project or role..." required></textarea>
-            </div>
-
-            <button type="submit" class="btn-pill-blue" style="width: 100%; padding: 0.95rem; margin-top: 0.5rem;">
-              Send Message &nearr;
-            </button>
-          </form>
-        </div>
-
       </div>
     </section>
   </main>
@@ -704,12 +885,12 @@
   <!-- =========================================================================
        Footer
        ========================================================================= -->
-  <footer class="site-boozt-footer">
-    <div class="container footer-flex-row">
-      <div class="footer-logo-title">
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <div class="footer-brand">
         pajar<span>.engineer</span>
       </div>
-      <div>
+      <div class="footer-copy">
         &copy; <span id="currentYear"></span> Pajar &bull; All Rights Reserved.
       </div>
     </div>
@@ -718,26 +899,25 @@
   <!-- =========================================================================
        Interactive Project Modal
        ========================================================================= -->
-  <div class="boozt-modal-backdrop" id="projectModal" role="dialog" aria-modal="true">
-    <div class="boozt-modal-card">
-      <button class="btn-close-modal" id="modalCloseBtn" aria-label="Close modal">
+  <div class="modal-backdrop" id="projectModal" role="dialog" aria-modal="true">
+    <div class="modal-card">
+      <button class="modal-close" id="modalCloseBtn" aria-label="Close modal">
         &times;
       </button>
 
-      <div class="modal-screen-preview">
+      <div class="modal-preview">
         <img id="modalImg" src="" alt="Project Preview">
       </div>
 
-      <div class="modal-content-details">
-        <div class="modal-badge-tag" id="modalCategory">Category</div>
-        <h3 class="modal-proj-name" id="modalTitle">Project Title</h3>
-        <p class="modal-proj-desc" id="modalDesc">Project description...</p>
+      <div class="modal-details">
+        <div class="modal-tag" id="modalCategory">Category</div>
+        <h3 class="modal-title" id="modalTitle">Project Title</h3>
+        <p class="modal-desc" id="modalDesc">Project description...</p>
 
-        <div
-          style="font-family: var(--font-mono); font-size: 0.8rem; font-weight: 700; text-transform: uppercase; color: rgba(255,255,255,0.6); margin-bottom: 0.6rem;">
+        <div class="modal-stack-label">
           Tech Stack &amp; Tools:
         </div>
-        <div class="modal-chips-container" id="modalTechStack"></div>
+        <div class="modal-chips" id="modalTechStack"></div>
       </div>
     </div>
   </div>
@@ -745,7 +925,7 @@
   <!-- =========================================================================
        Toast Notification
        ========================================================================= -->
-  <div class="boozt-toast" id="toastNotification" role="status">
+  <div class="toast" id="toastNotification" role="status">
     <span class="toast-msg">Email copied to clipboard!</span>
   </div>
 
