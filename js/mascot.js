@@ -38,21 +38,21 @@
   // Materials setup (Light vs Dark mode)
   // -------------------------------------------------------------
   const headMat = new THREE.MeshStandardMaterial({
-    color: 0xffffff,
-    roughness: 0.18,
-    metalness: 0.08,
+    color: 0xd9e8e4,
+    roughness: 0.28,
+    metalness: 0.06,
   });
 
   const accentMat = new THREE.MeshStandardMaterial({
     color: 0x009789,
-    roughness: 0.25,
-    metalness: 0.2,
+    roughness: 0.22,
+    metalness: 0.15,
   });
 
   const visorMat = new THREE.MeshStandardMaterial({
-    color: 0x071e1b,
-    roughness: 0.06,
-    metalness: 0.85,
+    color: 0x061e1b,
+    roughness: 0.12,
+    metalness: 0.25,
   });
 
   const eyeMat = new THREE.MeshBasicMaterial({
@@ -69,26 +69,32 @@
 
   const antennaTipMat = new THREE.MeshStandardMaterial({
     color: 0x00ffd5,
-    emissive: 0x009789,
+    emissive: 0x00ffd5,
     emissiveIntensity: 0.6,
     roughness: 0.2,
   });
 
-  // Lights
-  const ambientLight = new THREE.AmbientLight(0xffffff, 0.75);
+  // Lights tuned for clean 3D volume without blowing out highlights
+  const ambientLight = new THREE.AmbientLight(0xffffff, 0.45);
   scene.add(ambientLight);
 
-  const keyLight = new THREE.DirectionalLight(0xffffff, 1.2);
+  const keyLight = new THREE.DirectionalLight(0xffffff, 1.15);
   keyLight.position.set(3, 4, 4);
   scene.add(keyLight);
 
-  const fillLight = new THREE.DirectionalLight(0x00d6c2, 0.6);
+  const fillLight = new THREE.DirectionalLight(0x00d6c2, 0.35);
   fillLight.position.set(-3, -1, 2);
   scene.add(fillLight);
 
-  const rimLight = new THREE.DirectionalLight(0x00d6c2, 0.85);
-  rimLight.position.set(0, -3, -3);
+  // Bottom rim light provides dark/mint contour underneath white spheres
+  const rimLight = new THREE.DirectionalLight(0x006359, 0.7);
+  rimLight.position.set(0, -3, -1.5);
   scene.add(rimLight);
+
+  // Top rim light provides crisp highlight on head silhouette
+  const topRim = new THREE.DirectionalLight(0xffffff, 0.5);
+  topRim.position.set(0, 4, -2.5);
+  scene.add(topRim);
 
   // -------------------------------------------------------------
   // Construct 3D Mascot Character
@@ -105,28 +111,28 @@
   const headMesh = new THREE.Mesh(headGeo, headMat);
   headGroup.add(headMesh);
 
-  // Visor (glossy front screen)
-  const visorGeo = new THREE.SphereGeometry(0.78, 32, 24, 0, Math.PI * 2, 0, Math.PI * 0.55);
-  visorGeo.scale(1.02, 0.72, 0.7);
+  // Visor (glossy front screen, sits securely on front face so never clipped)
+  const visorGeo = new THREE.SphereGeometry(0.74, 32, 24, 0, Math.PI * 2, 0, Math.PI * 0.52);
+  visorGeo.scale(1.02, 0.72, 0.75);
   visorGeo.rotateX(Math.PI * 0.5);
   const visorMesh = new THREE.Mesh(visorGeo, visorMat);
-  visorMesh.position.set(0, -0.02, 0.42);
+  visorMesh.position.set(0, 0.02, 0.5);
   headGroup.add(visorMesh);
 
-  // Eyes Group (sits on front of visor with depthTest false so always visible)
+  // Eyes Group (sits cleanly on visor with depthTest false)
   const eyesGroup = new THREE.Group();
-  eyesGroup.position.set(0, 0.02, 1.01);
+  eyesGroup.position.set(0, 0.04, 1.06);
   headGroup.add(eyesGroup);
 
   // Eye geometries (vibrant cartoon oval eyes with shiny gleam)
-  const eyeGeo = new THREE.SphereGeometry(0.13, 24, 24);
+  const eyeGeo = new THREE.SphereGeometry(0.12, 24, 24);
   eyeGeo.scale(0.8, 1.45, 0.3);
 
   const gleamGeo = new THREE.SphereGeometry(0.04, 16, 16);
 
   // Left Eye
   const leftEyeGroup = new THREE.Group();
-  leftEyeGroup.position.set(-0.28, 0, 0);
+  leftEyeGroup.position.set(-0.26, 0, 0);
   eyesGroup.add(leftEyeGroup);
 
   const leftEye = new THREE.Mesh(eyeGeo, eyeMat);
@@ -140,7 +146,7 @@
 
   // Right Eye
   const rightEyeGroup = new THREE.Group();
-  rightEyeGroup.position.set(0.28, 0, 0);
+  rightEyeGroup.position.set(0.26, 0, 0);
   eyesGroup.add(rightEyeGroup);
 
   const rightEye = new THREE.Mesh(eyeGeo, eyeMat);
@@ -210,27 +216,45 @@
   // -------------------------------------------------------------
   function syncTheme(isDark) {
     if (isDark) {
-      headMat.color.setHex(0x063b35);
+      headMat.color.setHex(0x0a3b34);
       headMat.roughness = 0.25;
-      headMat.metalness = 0.2;
+      headMat.metalness = 0.12;
       accentMat.color.setHex(0x00d6c2);
-      visorMat.color.setHex(0x021614);
+      visorMat.color.setHex(0x021613);
+      visorMat.roughness = 0.1;
+      visorMat.metalness = 0.2;
       eyeMat.color.setHex(0x00ffd5);
       antennaTipMat.color.setHex(0x00ffd5);
-      antennaTipMat.emissive.setHex(0x00d6c2);
-      rimLight.color.setHex(0x00ffd5);
+      antennaTipMat.emissive.setHex(0x00ffd5);
+      ambientLight.intensity = 0.45;
+      keyLight.intensity = 1.0;
       keyLight.color.setHex(0xe0f7f4);
+      fillLight.color.setHex(0x00ffd5);
+      fillLight.intensity = 0.5;
+      rimLight.color.setHex(0x00ffd5);
+      rimLight.intensity = 1.2;
+      topRim.color.setHex(0x00ffd5);
+      topRim.intensity = 0.9;
     } else {
-      headMat.color.setHex(0xffffff);
-      headMat.roughness = 0.18;
-      headMat.metalness = 0.08;
+      headMat.color.setHex(0xd9e8e4);
+      headMat.roughness = 0.28;
+      headMat.metalness = 0.06;
       accentMat.color.setHex(0x009789);
-      visorMat.color.setHex(0x071e1b);
+      visorMat.color.setHex(0x061e1b);
+      visorMat.roughness = 0.12;
+      visorMat.metalness = 0.25;
       eyeMat.color.setHex(0x00ffd5);
       antennaTipMat.color.setHex(0x00ffd5);
-      antennaTipMat.emissive.setHex(0x009789);
-      rimLight.color.setHex(0x00d6c2);
+      antennaTipMat.emissive.setHex(0x00ffd5);
+      ambientLight.intensity = 0.45;
+      keyLight.intensity = 1.15;
       keyLight.color.setHex(0xffffff);
+      fillLight.color.setHex(0x00d6c2);
+      fillLight.intensity = 0.35;
+      rimLight.color.setHex(0x006359);
+      rimLight.intensity = 0.7;
+      topRim.color.setHex(0xffffff);
+      topRim.intensity = 0.5;
     }
   }
 
